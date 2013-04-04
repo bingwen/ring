@@ -8,16 +8,21 @@
 
 #import "MainViewController.h"
 #import <CoreLocation/CoreLocation.h>
+#import "Ext.h"
+#import "sqlite3.h"
+#import "PointView.h"
+#import "DistanceViewController.h"
 
 @interface MainViewController ()<CLLocationManagerDelegate>{
     CLLocationManager *locationmanager;
     CLLocation *checkLocation;
     
-    UILabel *lonLable;
-    UILabel *latLable;
-    
-    UIImageView *arrowImageView;
+    PointView *pointView;
+    DistanceViewController *distanceViewController;
     int heading;
+    double radius;
+    CGPoint ringCenter;
+    int distance;
 }
 
 @end
@@ -28,27 +33,34 @@
 {
     [super viewDidLoad];
     
-    UIImage *img1 = [UIImage imageNamed:@"img1.jpg"];
-    UIImageView *imgview1 = [[UIImageView alloc] initWithImage:img1];
-    [imgview1 setFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
+    distance = 100;
     
-    NSLog(@"%f,%f",imgview1.frame.size.width,imgview1.frame.size.height);
+    UIImage *imgBg = [UIImage imageNamed:@"4bg_dusk.jpg"];
+    if ([Ext checkIphone5]) {
+        imgBg = [UIImage imageNamed:@"5bg_dusk.jpg"];
+        NSLog(@"5");
+    }
+    UIImageView *imgviewBg = [[UIImageView alloc] initWithImage:imgBg];
+    [imgviewBg setFrame:CGRectMake(0, 0, [Ext screenSize].width, [Ext screenSize].height)];
+    [self.view addSubview:imgviewBg];
     
-    [self.view addSubview:imgview1];
+    UIImage *imgRing = [UIImage imageNamed:@"ring.png"];
+    UIImageView *imgviewRing = [[UIImageView alloc] initWithImage:imgRing];
+    radius = 97;
+    [imgviewRing setFrame:CGRectMake(0, 0, 2*(radius+5), 2*(radius+5))];
+    ringCenter = CGPointMake([Ext screenSize].width/2, [Ext screenSize].height/2+10);
+    imgviewRing.center = ringCenter;
+    [self.view addSubview:imgviewRing];
     
-    lonLable = [[UILabel alloc] initWithFrame:CGRectMake(50, 50, 100, 50)];
-    latLable = [[UILabel alloc] initWithFrame:CGRectMake(200, 50, 100, 50)];
+    pointView = [[PointView alloc] initWithFrame:CGRectMake(0, 0, [Ext screenSize].width, [Ext screenSize].height)];
+    [self.view addSubview:pointView];
     
-    [self.view addSubview:lonLable];
-    [self.view addSubview:latLable];
-    
-    arrowImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow.png"]];
-    
-    arrowImageView.center = CGPointMake(160, 240);
-    
-    [self.view addSubview:arrowImageView];
+    distanceViewController = [[DistanceViewController alloc] init];
+    [self.view addSubview:distanceViewController.view];
     
     
+    
+    ////定位服务
     locationmanager = [[CLLocationManager alloc] init];
         NSLog( @"Starting CLLocationManager" );
     locationmanager.delegate = self;
@@ -58,10 +70,8 @@
     
     heading = 0;
     
-    NSTimer * timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(testArrow) userInfo:nil repeats:YES];
+    NSTimer * timer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(checkPoint) userInfo:nil repeats:YES];
     [timer fire];
-    
-    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -70,7 +80,26 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (void)checkPoint{
+    
+    heading += 1;
+    double angle = (heading%360)*M_PI*2/360;
+    
+    double x = ringCenter.x + sin(angle)*radius;
+    double y = ringCenter.y - cos(angle)*radius;
+    
+    double x2 = ringCenter.x + sin(angle)*(radius+30);
+    double y2 = ringCenter.y - cos(angle)*(radius+30);
 
+    
+    [pointView setCenter:CGPointMake(x, y)];
+    [distanceViewController setCenter:CGPointMake(x2, y2)];
+    [pointView setNeedsDisplay];
+
+    [distanceViewController setDisatnce:heading];
+    [distanceViewController update];
+    
+}
 
 //协议中的方法，作用是每当位置发生更新时会调用的委托方法
 -(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
@@ -79,30 +108,17 @@
     CLLocationCoordinate2D loc = [newLocation coordinate];
     float longitude = loc.longitude; //经度
     float latitude = loc.latitude;//维度
-    lonLable.text = [NSString stringWithFormat:@"%f",longitude];
-    latLable.text = [NSString stringWithFormat:@"%f",latitude];
+    
     
 }
 
-- (void)testArrow{
-    heading += 5;
-    NSLog(@"%d",heading);
-    arrowImageView.transform = CGAffineTransformIdentity;
-    
-    CGAffineTransform transform = CGAffineTransformMakeRotation(-1 * M_PI*(heading%360)/180.0);
-    
-    arrowImageView.transform = transform;
-}
+
 -(void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading
 {
     //每次要重置view的位置，才能保证图片每次偏转量正常，而不是叠加，指针方向正确。
-    arrowImageView.transform = CGAffineTransformIdentity;
-    
-    CGAffineTransform transform = CGAffineTransformMakeRotation(-1 * M_PI*newHeading.magneticHeading/180.0);
-    
+        
     
     //    CGAffineTransform transform = CGAffineTransformMakeTranslation(10, 50);
-    arrowImageView.transform = transform;
 }
 
 //当位置获取或更新失败会调用的方法
@@ -123,11 +139,5 @@
                                          otherButtonTitles:@"OtherBtn",nil];
     [alert show];
 }
-//计算两个坐标之间的距离
-+(double)distanceBetweenOrderBy:(double)lat1 :(double)lat2 :(double)lng1 :(double)lng2{
-    CLLocation* curLocation = [[CLLocation alloc] initWithLatitude:lat1 longitude:lng1];
-    CLLocation* otherLocation = [[CLLocation alloc] initWithLatitude:lat2 longitude:lng2];
-    double distance  = [curLocation distanceFromLocation:otherLocation];
-    return distance;
-}
+
 @end
