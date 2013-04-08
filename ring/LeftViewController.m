@@ -7,6 +7,7 @@
 //
 
 #import "LeftViewController.h"
+#import "Ext.h"
 
 @interface LeftViewController ()
 
@@ -26,10 +27,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UIImageView * bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"4bg_setting.jpg"]];
+    if ([Ext checkIphone5]) {
+        bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"5bg_setting.jpg"]];
+    }
+    [self.view addSubview:bg];
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
-    label.text = @"hello";
-    [self.view addSubview:label];
+    UIImageView *smileView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"face_smile.png"]];
+    [smileView setFrame:CGRectMake(12, [Ext screenSize].height-70, 35, 35)];
+    [self.view addSubview:smileView];
+    
+    UIImageView *moreView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"more.png"]];
+    [moreView setFrame:CGRectMake(8, 10, 44, 59)];
+    [self.view addSubview:moreView];
 	// Do any additional setup after loading the view.
 }
 

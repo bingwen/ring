@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A118C0051712AB910019B0AA /* 4bg_mood.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A118C0041712AB910019B0AA /* 4bg_mood.jpg */; };
+		A118C00F1712ABB60019B0AA /* 5bg_mood.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A118C0061712ABB60019B0AA /* 5bg_mood.jpg */; };
+		A118C0101712ABB60019B0AA /* back_mood.png in Resources */ = {isa = PBXBuildFile; fileRef = A118C0071712ABB60019B0AA /* back_mood.png */; };
+		A118C0121712ABB60019B0AA /* choose.png in Resources */ = {isa = PBXBuildFile; fileRef = A118C0091712ABB60019B0AA /* choose.png */; };
+		A118C0131712ABB60019B0AA /* invite.png in Resources */ = {isa = PBXBuildFile; fileRef = A118C00A1712ABB60019B0AA /* invite.png */; };
+		A118C0141712ABB60019B0AA /* mood_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A118C00B1712ABB60019B0AA /* mood_bg.png */; };
+		A118C0151712ABB60019B0AA /* point_2.png in Resources */ = {isa = PBXBuildFile; fileRef = A118C00C1712ABB60019B0AA /* point_2.png */; };
+		A118C0161712ABB60019B0AA /* point.png in Resources */ = {isa = PBXBuildFile; fileRef = A118C00D1712ABB60019B0AA /* point.png */; };
+		A118C0171712ABB60019B0AA /* send.png in Resources */ = {isa = PBXBuildFile; fileRef = A118C00E1712ABB60019B0AA /* send.png */; };
+		A118C01B1712B4480019B0AA /* MoodLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A118C01A1712B4480019B0AA /* MoodLineViewController.m */; };
+		A118C01F1712B4C90019B0AA /* curve_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A118C01D1712B4C90019B0AA /* curve_bg.png */; };
+		A118C0201712B4C90019B0AA /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = A118C01E1712B4C90019B0AA /* share.png */; };
+		A16FD33117128ECE00EA10C8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A16FD33017128ECE00EA10C8 /* LoginViewController.m */; };
+		A16FD33817128F1500EA10C8 /* 5bg_login.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A16FD33317128F1500EA10C8 /* 5bg_login.jpg */; };
+		A16FD33917128F1500EA10C8 /* 4bg_login.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A16FD33417128F1500EA10C8 /* 4bg_login.jpg */; };
+		A16FD33A17128F1500EA10C8 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = A16FD33517128F1500EA10C8 /* login.png */; };
+		A16FD33B17128F1500EA10C8 /* password.png in Resources */ = {isa = PBXBuildFile; fileRef = A16FD33617128F1500EA10C8 /* password.png */; };
+		A16FD33C17128F1500EA10C8 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = A16FD33717128F1500EA10C8 /* user.png */; };
+		A16FD33F1712A66F00EA10C8 /* LoginUITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A16FD33E1712A66F00EA10C8 /* LoginUITextField.m */; };
+		A16FD3431712AA4500EA10C8 /* MoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A16FD3421712AA4500EA10C8 /* MoodViewController.m */; };
 		A1922153170D2941002F1D20 /* data.db in Resources */ = {isa = PBXBuildFile; fileRef = A1922152170D2941002F1D20 /* data.db */; };
 		A1922155170D2A47002F1D20 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A1922154170D2A47002F1D20 /* libsqlite3.0.dylib */; };
 		A1922158170D2E54002F1D20 /* Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A1922157170D2E54002F1D20 /* Ext.m */; };
@@ -31,6 +51,9 @@
 		A1922191170D4B52002F1D20 /* ring.png in Resources */ = {isa = PBXBuildFile; fileRef = A192217F170D4B52002F1D20 /* ring.png */; };
 		A1922197170D647D002F1D20 /* PointView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1922196170D647C002F1D20 /* PointView.m */; };
 		A192219A170D72FE002F1D20 /* DistanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1922199170D72FD002F1D20 /* DistanceViewController.m */; };
+		A192219D170DBBEA002F1D20 /* glow.png in Resources */ = {isa = PBXBuildFile; fileRef = A192219B170DBBE9002F1D20 /* glow.png */; };
+		A192219E170DBBEA002F1D20 /* K.png in Resources */ = {isa = PBXBuildFile; fileRef = A192219C170DBBEA002F1D20 /* K.png */; };
+		A1A015031712D67500E222BE /* MoodLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A015021712D67500E222BE /* MoodLineView.m */; };
 		A1B46C48170BD68E00A630CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B46C47170BD68E00A630CA /* UIKit.framework */; };
 		A1B46C4A170BD68E00A630CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B46C49170BD68E00A630CA /* Foundation.framework */; };
 		A1B46C4C170BD68E00A630CA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B46C4B170BD68E00A630CA /* CoreGraphics.framework */; };
@@ -41,7 +64,6 @@
 		A1B46C5C170BD68F00A630CA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A1B46C5B170BD68F00A630CA /* Default@2x.png */; };
 		A1B46C5E170BD68F00A630CA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A1B46C5D170BD68F00A630CA /* Default-568h@2x.png */; };
 		A1B46C61170BD68F00A630CA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B46C60170BD68F00A630CA /* MainViewController.m */; };
-		A1B46C64170BD68F00A630CA /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1B46C62170BD68F00A630CA /* MainViewController.xib */; };
 		A1B46C6E170BE7DD00A630CA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B46C6D170BE7DD00A630CA /* CoreLocation.framework */; };
 		A1B46C72170BFD3F00A630CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B46C71170BFD3F00A630CA /* QuartzCore.framework */; };
 		A1B46C78170BFEEB00A630CA /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B46C77170BFEEA00A630CA /* LeftViewController.m */; };
@@ -49,6 +71,30 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A118C0041712AB910019B0AA /* 4bg_mood.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4bg_mood.jpg; sourceTree = "<group>"; };
+		A118C0061712ABB60019B0AA /* 5bg_mood.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5bg_mood.jpg; sourceTree = "<group>"; };
+		A118C0071712ABB60019B0AA /* back_mood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_mood.png; sourceTree = "<group>"; };
+		A118C0091712ABB60019B0AA /* choose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = choose.png; sourceTree = "<group>"; };
+		A118C00A1712ABB60019B0AA /* invite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = invite.png; sourceTree = "<group>"; };
+		A118C00B1712ABB60019B0AA /* mood_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mood_bg.png; sourceTree = "<group>"; };
+		A118C00C1712ABB60019B0AA /* point_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = point_2.png; sourceTree = "<group>"; };
+		A118C00D1712ABB60019B0AA /* point.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = point.png; sourceTree = "<group>"; };
+		A118C00E1712ABB60019B0AA /* send.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = send.png; sourceTree = "<group>"; };
+		A118C0191712B4470019B0AA /* MoodLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoodLineViewController.h; sourceTree = "<group>"; };
+		A118C01A1712B4480019B0AA /* MoodLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoodLineViewController.m; sourceTree = "<group>"; };
+		A118C01D1712B4C90019B0AA /* curve_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = curve_bg.png; sourceTree = "<group>"; };
+		A118C01E1712B4C90019B0AA /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
+		A16FD32F17128ECE00EA10C8 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		A16FD33017128ECE00EA10C8 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		A16FD33317128F1500EA10C8 /* 5bg_login.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5bg_login.jpg; sourceTree = "<group>"; };
+		A16FD33417128F1500EA10C8 /* 4bg_login.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4bg_login.jpg; sourceTree = "<group>"; };
+		A16FD33517128F1500EA10C8 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
+		A16FD33617128F1500EA10C8 /* password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password.png; sourceTree = "<group>"; };
+		A16FD33717128F1500EA10C8 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		A16FD33D1712A66F00EA10C8 /* LoginUITextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginUITextField.h; sourceTree = "<group>"; };
+		A16FD33E1712A66F00EA10C8 /* LoginUITextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginUITextField.m; sourceTree = "<group>"; };
+		A16FD3411712AA4500EA10C8 /* MoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoodViewController.h; sourceTree = "<group>"; };
+		A16FD3421712AA4500EA10C8 /* MoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoodViewController.m; sourceTree = "<group>"; };
 		A1922152170D2941002F1D20 /* data.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = data.db; sourceTree = "<group>"; };
 		A1922154170D2A47002F1D20 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		A1922156170D2E54002F1D20 /* Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ext.h; sourceTree = "<group>"; };
@@ -77,6 +123,10 @@
 		A1922196170D647C002F1D20 /* PointView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointView.m; sourceTree = "<group>"; };
 		A1922198170D72FD002F1D20 /* DistanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistanceViewController.h; sourceTree = "<group>"; };
 		A1922199170D72FD002F1D20 /* DistanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistanceViewController.m; sourceTree = "<group>"; };
+		A192219B170DBBE9002F1D20 /* glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glow.png; sourceTree = "<group>"; };
+		A192219C170DBBEA002F1D20 /* K.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = K.png; sourceTree = "<group>"; };
+		A1A015011712D67500E222BE /* MoodLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoodLineView.h; sourceTree = "<group>"; };
+		A1A015021712D67500E222BE /* MoodLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoodLineView.m; sourceTree = "<group>"; };
 		A1B46C44170BD68E00A630CA /* ring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B46C47170BD68E00A630CA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A1B46C49170BD68E00A630CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -92,7 +142,6 @@
 		A1B46C5D170BD68F00A630CA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A1B46C5F170BD68F00A630CA /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		A1B46C60170BD68F00A630CA /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		A1B46C63170BD68F00A630CA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController.xib; sourceTree = "<group>"; };
 		A1B46C6D170BE7DD00A630CA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A1B46C71170BFD3F00A630CA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A1B46C76170BFEEA00A630CA /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
@@ -118,6 +167,99 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A118C0181712AC020019B0AA /* main */ = {
+			isa = PBXGroup;
+			children = (
+				A192216E170D4B52002F1D20 /* 0.png */,
+				A192216F170D4B52002F1D20 /* 1.png */,
+				A1922170170D4B52002F1D20 /* 2.png */,
+				A1922171170D4B52002F1D20 /* 3.png */,
+				A1922172170D4B52002F1D20 /* 4.png */,
+				A1922175170D4B52002F1D20 /* 5.png */,
+				A1922178170D4B52002F1D20 /* 6.png */,
+				A1922179170D4B52002F1D20 /* 7.png */,
+				A192217A170D4B52002F1D20 /* 8.png */,
+				A192217B170D4B52002F1D20 /* 9.png */,
+				A192217F170D4B52002F1D20 /* ring.png */,
+				A192219B170DBBE9002F1D20 /* glow.png */,
+				A192219C170DBBEA002F1D20 /* K.png */,
+				A192217D170D4B52002F1D20 /* m.png */,
+			);
+			name = main;
+			sourceTree = "<group>";
+		};
+		A118C01C1712B4A70019B0AA /* moodline */ = {
+			isa = PBXGroup;
+			children = (
+				A118C01D1712B4C90019B0AA /* curve_bg.png */,
+				A118C01E1712B4C90019B0AA /* share.png */,
+			);
+			name = moodline;
+			sourceTree = "<group>";
+		};
+		A16FD33217128EE200EA10C8 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				A16FD33317128F1500EA10C8 /* 5bg_login.jpg */,
+				A16FD33417128F1500EA10C8 /* 4bg_login.jpg */,
+				A16FD33517128F1500EA10C8 /* login.png */,
+				A16FD33617128F1500EA10C8 /* password.png */,
+				A16FD33717128F1500EA10C8 /* user.png */,
+			);
+			name = login;
+			sourceTree = "<group>";
+		};
+		A16FD3401712AA1D00EA10C8 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				A16FD32F17128ECE00EA10C8 /* LoginViewController.h */,
+				A16FD33017128ECE00EA10C8 /* LoginViewController.m */,
+				A16FD33D1712A66F00EA10C8 /* LoginUITextField.h */,
+				A16FD33E1712A66F00EA10C8 /* LoginUITextField.m */,
+			);
+			name = login;
+			sourceTree = "<group>";
+		};
+		A16FD3441712AA6800EA10C8 /* mood */ = {
+			isa = PBXGroup;
+			children = (
+				A118C0041712AB910019B0AA /* 4bg_mood.jpg */,
+				A118C0061712ABB60019B0AA /* 5bg_mood.jpg */,
+				A118C0071712ABB60019B0AA /* back_mood.png */,
+				A118C0091712ABB60019B0AA /* choose.png */,
+				A118C00A1712ABB60019B0AA /* invite.png */,
+				A118C00B1712ABB60019B0AA /* mood_bg.png */,
+				A118C00C1712ABB60019B0AA /* point_2.png */,
+				A118C00D1712ABB60019B0AA /* point.png */,
+				A118C00E1712ABB60019B0AA /* send.png */,
+			);
+			name = mood;
+			sourceTree = "<group>";
+		};
+		A1A014FF1712D5FF00E222BE /* main */ = {
+			isa = PBXGroup;
+			children = (
+				A1B46C5F170BD68F00A630CA /* MainViewController.h */,
+				A1B46C60170BD68F00A630CA /* MainViewController.m */,
+				A1922195170D647C002F1D20 /* PointView.h */,
+				A1922196170D647C002F1D20 /* PointView.m */,
+				A1922198170D72FD002F1D20 /* DistanceViewController.h */,
+				A1922199170D72FD002F1D20 /* DistanceViewController.m */,
+			);
+			name = main;
+			sourceTree = "<group>";
+		};
+		A1A015001712D64200E222BE /* moodline */ = {
+			isa = PBXGroup;
+			children = (
+				A118C0191712B4470019B0AA /* MoodLineViewController.h */,
+				A118C01A1712B4480019B0AA /* MoodLineViewController.m */,
+				A1A015011712D67500E222BE /* MoodLineView.h */,
+				A1A015021712D67500E222BE /* MoodLineView.m */,
+			);
+			name = moodline;
+			sourceTree = "<group>";
+		};
 		A1B46C3B170BD68E00A630CA = {
 			isa = PBXGroup;
 			children = (
@@ -155,20 +297,18 @@
 				A1B46C6A170BDFDB00A630CA /* resource */,
 				A1B46C56170BD68E00A630CA /* AppDelegate.h */,
 				A1B46C57170BD68E00A630CA /* AppDelegate.m */,
-				A1B46C5F170BD68F00A630CA /* MainViewController.h */,
-				A1B46C60170BD68F00A630CA /* MainViewController.m */,
-				A1922195170D647C002F1D20 /* PointView.h */,
-				A1922196170D647C002F1D20 /* PointView.m */,
-				A1922198170D72FD002F1D20 /* DistanceViewController.h */,
-				A1922199170D72FD002F1D20 /* DistanceViewController.m */,
+				A1A014FF1712D5FF00E222BE /* main */,
 				A1922159170D369B002F1D20 /* DatabaseManager.h */,
 				A192215A170D369B002F1D20 /* DatabaseManager.m */,
 				A1922156170D2E54002F1D20 /* Ext.h */,
 				A1922157170D2E54002F1D20 /* Ext.m */,
-				A1B46C62170BD68F00A630CA /* MainViewController.xib */,
 				A1B46C4E170BD68E00A630CA /* Supporting Files */,
 				A1B46C76170BFEEA00A630CA /* LeftViewController.h */,
 				A1B46C77170BFEEA00A630CA /* LeftViewController.m */,
+				A16FD3411712AA4500EA10C8 /* MoodViewController.h */,
+				A16FD3421712AA4500EA10C8 /* MoodViewController.m */,
+				A1A015001712D64200E222BE /* moodline */,
+				A16FD3401712AA1D00EA10C8 /* login */,
 			);
 			path = ring;
 			sourceTree = "<group>";
@@ -190,24 +330,16 @@
 		A1B46C6A170BDFDB00A630CA /* resource */ = {
 			isa = PBXGroup;
 			children = (
-				A192216E170D4B52002F1D20 /* 0.png */,
-				A192216F170D4B52002F1D20 /* 1.png */,
-				A1922170170D4B52002F1D20 /* 2.png */,
-				A1922171170D4B52002F1D20 /* 3.png */,
-				A1922172170D4B52002F1D20 /* 4.png */,
+				A118C01C1712B4A70019B0AA /* moodline */,
+				A118C0181712AC020019B0AA /* main */,
+				A16FD3441712AA6800EA10C8 /* mood */,
+				A16FD33217128EE200EA10C8 /* login */,
 				A1922173170D4B52002F1D20 /* 4bg_dusk.jpg */,
 				A1922174170D4B52002F1D20 /* 4bg_setting.jpg */,
-				A1922175170D4B52002F1D20 /* 5.png */,
 				A1922176170D4B52002F1D20 /* 5bg_dusk.jpg */,
 				A1922177170D4B52002F1D20 /* 5bg_setting.jpg */,
-				A1922178170D4B52002F1D20 /* 6.png */,
-				A1922179170D4B52002F1D20 /* 7.png */,
-				A192217A170D4B52002F1D20 /* 8.png */,
-				A192217B170D4B52002F1D20 /* 9.png */,
 				A192217C170D4B52002F1D20 /* face_smile.png */,
-				A192217D170D4B52002F1D20 /* m.png */,
 				A192217E170D4B52002F1D20 /* more.png */,
-				A192217F170D4B52002F1D20 /* ring.png */,
 				A1922152170D2941002F1D20 /* data.db */,
 			);
 			name = resource;
@@ -277,7 +409,6 @@
 				A1B46C5A170BD68F00A630CA /* Default.png in Resources */,
 				A1B46C5C170BD68F00A630CA /* Default@2x.png in Resources */,
 				A1B46C5E170BD68F00A630CA /* Default-568h@2x.png in Resources */,
-				A1B46C64170BD68F00A630CA /* MainViewController.xib in Resources */,
 				A1922153170D2941002F1D20 /* data.db in Resources */,
 				A1922180170D4B52002F1D20 /* 0.png in Resources */,
 				A1922181170D4B52002F1D20 /* 1.png in Resources */,
@@ -297,6 +428,24 @@
 				A192218F170D4B52002F1D20 /* m.png in Resources */,
 				A1922190170D4B52002F1D20 /* more.png in Resources */,
 				A1922191170D4B52002F1D20 /* ring.png in Resources */,
+				A192219D170DBBEA002F1D20 /* glow.png in Resources */,
+				A192219E170DBBEA002F1D20 /* K.png in Resources */,
+				A16FD33817128F1500EA10C8 /* 5bg_login.jpg in Resources */,
+				A16FD33917128F1500EA10C8 /* 4bg_login.jpg in Resources */,
+				A16FD33A17128F1500EA10C8 /* login.png in Resources */,
+				A16FD33B17128F1500EA10C8 /* password.png in Resources */,
+				A16FD33C17128F1500EA10C8 /* user.png in Resources */,
+				A118C0051712AB910019B0AA /* 4bg_mood.jpg in Resources */,
+				A118C00F1712ABB60019B0AA /* 5bg_mood.jpg in Resources */,
+				A118C0101712ABB60019B0AA /* back_mood.png in Resources */,
+				A118C0121712ABB60019B0AA /* choose.png in Resources */,
+				A118C0131712ABB60019B0AA /* invite.png in Resources */,
+				A118C0141712ABB60019B0AA /* mood_bg.png in Resources */,
+				A118C0151712ABB60019B0AA /* point_2.png in Resources */,
+				A118C0161712ABB60019B0AA /* point.png in Resources */,
+				A118C0171712ABB60019B0AA /* send.png in Resources */,
+				A118C01F1712B4C90019B0AA /* curve_bg.png in Resources */,
+				A118C0201712B4C90019B0AA /* share.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +465,11 @@
 				A192215B170D369B002F1D20 /* DatabaseManager.m in Sources */,
 				A1922197170D647D002F1D20 /* PointView.m in Sources */,
 				A192219A170D72FE002F1D20 /* DistanceViewController.m in Sources */,
+				A16FD33117128ECE00EA10C8 /* LoginViewController.m in Sources */,
+				A16FD33F1712A66F00EA10C8 /* LoginUITextField.m in Sources */,
+				A16FD3431712AA4500EA10C8 /* MoodViewController.m in Sources */,
+				A118C01B1712B4480019B0AA /* MoodLineViewController.m in Sources */,
+				A1A015031712D67500E222BE /* MoodLineView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,14 +482,6 @@
 				A1B46C51170BD68E00A630CA /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		A1B46C62170BD68F00A630CA /* MainViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A1B46C63170BD68F00A630CA /* en */,
-			);
-			name = MainViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

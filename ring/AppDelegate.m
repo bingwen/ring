@@ -22,7 +22,7 @@
     
     LeftViewController *leftViewController = [[LeftViewController alloc] init];
 
-    self.mainViewController = [[MainViewController alloc] initWithNibName:@"ViewController" bundle:nil];    
+    self.mainViewController = [[MainViewController alloc] init];    
     self.menuController = [[DDMenuController alloc] initWithRootViewController:self.mainViewController];
     self.menuController.leftViewController = leftViewController;
     self.menuController.rightViewController = leftViewController;

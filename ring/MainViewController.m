@@ -12,12 +12,16 @@
 #import "sqlite3.h"
 #import "PointView.h"
 #import "DistanceViewController.h"
+#import "LoginViewController.h"
+#import "MoodViewController.h"
+#import "MoodLineViewController.h"
 
 @interface MainViewController ()<CLLocationManagerDelegate>{
     CLLocationManager *locationmanager;
     CLLocation *checkLocation;
     
     PointView *pointView;
+    UIImageView *glowView;
     DistanceViewController *distanceViewController;
     int heading;
     double radius;
@@ -44,6 +48,10 @@
     [imgviewBg setFrame:CGRectMake(0, 0, [Ext screenSize].width, [Ext screenSize].height)];
     [self.view addSubview:imgviewBg];
     
+    glowView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"glow.png"]];
+    [glowView setFrame:CGRectMake(-100, -100, 32, 79)];
+    [self.view addSubview:glowView];
+    
     UIImage *imgRing = [UIImage imageNamed:@"ring.png"];
     UIImageView *imgviewRing = [[UIImageView alloc] initWithImage:imgRing];
     radius = 97;
@@ -51,6 +59,8 @@
     ringCenter = CGPointMake([Ext screenSize].width/2, [Ext screenSize].height/2+10);
     imgviewRing.center = ringCenter;
     [self.view addSubview:imgviewRing];
+    
+   
     
     pointView = [[PointView alloc] initWithFrame:CGRectMake(0, 0, [Ext screenSize].width, [Ext screenSize].height)];
     [self.view addSubview:pointView];
@@ -72,6 +82,22 @@
     
     NSTimer * timer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(checkPoint) userInfo:nil repeats:YES];
     [timer fire];
+    
+    if (NO) {
+        LoginViewController *loginViewController = [[LoginViewController alloc] init];
+        [loginViewController.view setFrame:CGRectMake(0, 0, [Ext screenSize].width, [Ext screenSize].height)];
+        [self.view addSubview:loginViewController.view];
+    }
+    if (NO) {
+        MoodViewController *moodViewController = [[MoodViewController alloc] init];
+        moodViewController.view.frame = CGRectMake(0, 0, [Ext screenSize].width, [Ext screenSize].height);
+        [self.view addSubview:moodViewController.view];
+    }
+    if (YES) {
+        MoodLineViewController *moodLine = [[MoodLineViewController alloc] init];
+        moodLine.view.frame = CGRectMake(0, 0, [Ext screenSize].width, [Ext screenSize].height);
+        [self.view addSubview:moodLine.view];
+    }
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -90,13 +116,18 @@
     
     double x2 = ringCenter.x + sin(angle)*(radius+30);
     double y2 = ringCenter.y - cos(angle)*(radius+30);
-
     
+    double x3 = ringCenter.x + sin(angle)*(radius+13);
+    double y3 = ringCenter.y - cos(angle)*(radius+13);
+
     [pointView setCenter:CGPointMake(x, y)];
     [distanceViewController setCenter:CGPointMake(x2, y2)];
     [pointView setNeedsDisplay];
+    
+    glowView.transform = CGAffineTransformMakeRotation(0.5*M_PI+angle);
+    [glowView setCenter:CGPointMake(x3, y3)];
 
-    [distanceViewController setDisatnce:heading];
+    [distanceViewController setDisatnce:(heading*1000)];
     [distanceViewController update];
     
 }

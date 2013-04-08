@@ -12,6 +12,7 @@
 {
     NSMutableArray *numImageArray;
     UIImageView *mImageView;
+    UIImageView *kImageView;
 }
 @end
 
@@ -35,6 +36,9 @@
         
         mImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"m.png"]];
         [mImageView setFrame:CGRectMake(0, 0, 14, 9)];
+        
+        kImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"K.png"]];
+        [kImageView setFrame:CGRectMake(0, 0, 9, 12)];
     }
     return self;
 }
@@ -67,7 +71,7 @@
         [self.view addSubview:mImageView];
         [self.view addSubview:img0View];
     }
-    else{
+    else if(disatnce < 1000){
         int x = center.x;
         int y = center.y-20;
         
@@ -94,6 +98,37 @@
             num = num/10;
         }
         
+    }
+    else{
+        int x = center.x;
+        int y = center.y-20;
+        
+        int digitNum = 0;
+        int num = disatnce/1000;
+        while (num>0) {
+            digitNum += 1;
+            num = num/10;
+        }
+        
+        x += (10*digitNum+15+10)/2;
+        x -= 7;
+        [mImageView setCenter:CGPointMake(x, y+1)];
+        [self.view addSubview:mImageView];
+        x -= 13;
+        [kImageView setCenter:CGPointMake(x, y)];
+        [self.view addSubview:kImageView];
+        
+        x -= 5;
+        num = disatnce/1000;
+        while (num>0) {
+            x -= 10;
+            UIImage *img = [numImageArray objectAtIndex:num%10];
+            UIImageView *imgView = [[UIImageView alloc] initWithImage:img];
+            [imgView setFrame:CGRectMake(0, 0, 9, 12)];
+            [imgView setCenter:CGPointMake(x, y)];
+            [self.view addSubview:imgView];
+            num = num/10;
+        }
     }
 }
 
