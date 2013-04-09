@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MoodLineView : UIView
-
+@property (nonatomic,strong) NSArray *points;
+@property (nonatomic,assign) int x;
+@property (nonatomic,strong) UIColor *color;
 @end

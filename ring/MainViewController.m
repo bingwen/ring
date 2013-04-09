@@ -60,7 +60,6 @@
     imgviewRing.center = ringCenter;
     [self.view addSubview:imgviewRing];
     
-   
     
     pointView = [[PointView alloc] initWithFrame:CGRectMake(0, 0, [Ext screenSize].width, [Ext screenSize].height)];
     [self.view addSubview:pointView];

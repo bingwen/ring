@@ -53,6 +53,11 @@
 		A192219A170D72FE002F1D20 /* DistanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1922199170D72FD002F1D20 /* DistanceViewController.m */; };
 		A192219D170DBBEA002F1D20 /* glow.png in Resources */ = {isa = PBXBuildFile; fileRef = A192219B170DBBE9002F1D20 /* glow.png */; };
 		A192219E170DBBEA002F1D20 /* K.png in Resources */ = {isa = PBXBuildFile; fileRef = A192219C170DBBEA002F1D20 /* K.png */; };
+		A198F3181713CB43003E07FE /* face1.png in Resources */ = {isa = PBXBuildFile; fileRef = A198F3131713CB43003E07FE /* face1.png */; };
+		A198F3191713CB43003E07FE /* face2.png in Resources */ = {isa = PBXBuildFile; fileRef = A198F3141713CB43003E07FE /* face2.png */; };
+		A198F31A1713CB43003E07FE /* face3.png in Resources */ = {isa = PBXBuildFile; fileRef = A198F3151713CB43003E07FE /* face3.png */; };
+		A198F31B1713CB43003E07FE /* face4.png in Resources */ = {isa = PBXBuildFile; fileRef = A198F3161713CB43003E07FE /* face4.png */; };
+		A198F31C1713CB43003E07FE /* line1.png in Resources */ = {isa = PBXBuildFile; fileRef = A198F3171713CB43003E07FE /* line1.png */; };
 		A1A015031712D67500E222BE /* MoodLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A015021712D67500E222BE /* MoodLineView.m */; };
 		A1B46C48170BD68E00A630CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B46C47170BD68E00A630CA /* UIKit.framework */; };
 		A1B46C4A170BD68E00A630CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B46C49170BD68E00A630CA /* Foundation.framework */; };
@@ -125,6 +130,11 @@
 		A1922199170D72FD002F1D20 /* DistanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistanceViewController.m; sourceTree = "<group>"; };
 		A192219B170DBBE9002F1D20 /* glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glow.png; sourceTree = "<group>"; };
 		A192219C170DBBEA002F1D20 /* K.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = K.png; sourceTree = "<group>"; };
+		A198F3131713CB43003E07FE /* face1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = face1.png; sourceTree = "<group>"; };
+		A198F3141713CB43003E07FE /* face2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = face2.png; sourceTree = "<group>"; };
+		A198F3151713CB43003E07FE /* face3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = face3.png; sourceTree = "<group>"; };
+		A198F3161713CB43003E07FE /* face4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = face4.png; sourceTree = "<group>"; };
+		A198F3171713CB43003E07FE /* line1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line1.png; sourceTree = "<group>"; };
 		A1A015011712D67500E222BE /* MoodLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoodLineView.h; sourceTree = "<group>"; };
 		A1A015021712D67500E222BE /* MoodLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoodLineView.m; sourceTree = "<group>"; };
 		A1B46C44170BD68E00A630CA /* ring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ring.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +201,11 @@
 		A118C01C1712B4A70019B0AA /* moodline */ = {
 			isa = PBXGroup;
 			children = (
+				A198F3131713CB43003E07FE /* face1.png */,
+				A198F3141713CB43003E07FE /* face2.png */,
+				A198F3151713CB43003E07FE /* face3.png */,
+				A198F3161713CB43003E07FE /* face4.png */,
+				A198F3171713CB43003E07FE /* line1.png */,
 				A118C01D1712B4C90019B0AA /* curve_bg.png */,
 				A118C01E1712B4C90019B0AA /* share.png */,
 			);
@@ -446,6 +461,11 @@
 				A118C0171712ABB60019B0AA /* send.png in Resources */,
 				A118C01F1712B4C90019B0AA /* curve_bg.png in Resources */,
 				A118C0201712B4C90019B0AA /* share.png in Resources */,
+				A198F3181713CB43003E07FE /* face1.png in Resources */,
+				A198F3191713CB43003E07FE /* face2.png in Resources */,
+				A198F31A1713CB43003E07FE /* face3.png in Resources */,
+				A198F31B1713CB43003E07FE /* face4.png in Resources */,
+				A198F31C1713CB43003E07FE /* line1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
