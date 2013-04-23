@@ -8,9 +8,12 @@
 
 #import "MoodViewController.h"
 #import "Ext.h"
+#import <QuartzCore/QuartzCore.h>
 
-@interface MoodViewController ()
-
+@interface MoodViewController (){
+    UIButton *backBtn;
+}
+- (IBAction)backPressed:(id)sender;
 @end
 
 @implementation MoodViewController
@@ -39,23 +42,48 @@
     moodBg.frame = CGRectMake(0, 0, 320, 198);
     [self.view addSubview:moodBg];
     
-    UIButton *backBtn = [[UIButton alloc] init];
+    backBtn = [[UIButton alloc] init];
     [backBtn setBackgroundImage:[UIImage imageNamed:@"back_mood.png"] forState:UIControlStateNormal];
     backBtn.frame = CGRectMake(0, -5, 60, 50);
+    if ([self respondsToSelector:@selector(backPressed:)]) {
+        [backBtn addTarget:self action:@selector(backPressed:) forControlEvents:UIControlEventTouchUpInside];
+    }
     [self.view addSubview:backBtn];
     
+    
+    
+    UIImageView *userImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"user1.png"]];
+    userImage.frame = CGRectMake(0, 0, 26, 20);
+    userImage.center = CGPointMake(26, 205);
+    [self.view addSubview:userImage];
+    
     UIButton *inviteBtn = [[UIButton alloc] init];
-    [inviteBtn setBackgroundImage:[UIImage imageNamed:@"invite.png"] forState:UIControlStateNormal];
-    inviteBtn.frame = CGRectMake(0, 190, 177, 29);
-    inviteBtn.center = CGPointMake(80, 205);
+    [inviteBtn setBackgroundImage:[UIImage imageNamed:@"input2.png"] forState:UIControlStateNormal];
+    inviteBtn.frame = CGRectMake(0, 190, 110, 28);
+    inviteBtn.center = CGPointMake(90, 205);
     [self.view addSubview:inviteBtn];
+    
     
     UIButton *sendBtn = [[UIButton alloc] init];
     [sendBtn setBackgroundImage:[UIImage imageNamed:@"send.png"] forState:UIControlStateNormal];
-    sendBtn.frame = CGRectMake(0, 0, 120, 24);
-    sendBtn.center = CGPointMake(240, 205);
+    [sendBtn setBackgroundImage:[UIImage imageNamed:@"send1.png"] forState:UIControlStateSelected];
+    sendBtn.frame = CGRectMake(0, 0, 100, 20);
+    sendBtn.center = CGPointMake(250, 205);
+    
     [self.view addSubview:sendBtn];
 	// Do any additional setup after loading the view.
+}
+
+- (IBAction)backPressed:(id)sender{
+    CATransition *animation = [CATransition animation];
+    animation.duration = 0.5;
+    animation.delegate = self;
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    animation.type = kCATransitionPush;
+    animation.subtype = kCATransitionFromBottom;
+    animation.removedOnCompletion = YES;
+    [self.view.superview.layer addAnimation:animation forKey:@"mood-back"];
+    [self.view removeFromSuperview];
 }
 
 - (void)didReceiveMemoryWarning

@@ -109,10 +109,17 @@
     MoodLineView *moodLineView = [[MoodLineView alloc] initWithFrame:CGRectMake(0, 0, [Ext screenSize].width, [Ext screenSize].height)];
     [self.view addSubview:moodLineView];
     
-    moodLineView.points = [NSArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(50, y1)],[NSValue valueWithCGPoint:CGPointMake(70, y2)],[NSValue valueWithCGPoint:CGPointMake(90, y1)],[NSValue valueWithCGPoint:CGPointMake(110, y4)],[NSValue valueWithCGPoint:CGPointMake(130, y1)],[NSValue valueWithCGPoint:CGPointMake(150, y2)],[NSValue valueWithCGPoint:CGPointMake(170, y1)],[NSValue valueWithCGPoint:CGPointMake(190, y4)], nil];
+    moodLineView.points = [NSArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(50, y4)],[NSValue valueWithCGPoint:CGPointMake(70, y2)],[NSValue valueWithCGPoint:CGPointMake(90, y1)],[NSValue valueWithCGPoint:CGPointMake(110, y4)],[NSValue valueWithCGPoint:CGPointMake(130, y1)],[NSValue valueWithCGPoint:CGPointMake(150, y2)],[NSValue valueWithCGPoint:CGPointMake(170, y1)],[NSValue valueWithCGPoint:CGPointMake(190, y4)], nil];
     
     moodLineView.x = 0;
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:0.02f target:moodLineView selector:@selector(drawAction:) userInfo:nil repeats:YES];
+    moodLineView.y = 0;
+    moodLineView.bottomY = 240;
+    
+    UIColor *redLineColor= [UIColor colorWithRed:230/255.0 green:108/255.0 blue:105/255.0 alpha:1];
+    UIColor *blueLineColor = [UIColor colorWithRed:91/255.0 green:154/255.0 blue:169/255.0 alpha:1];
+    moodLineView.color = blueLineColor;
+    
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:0.001f target:moodLineView selector:@selector(drawAction:) userInfo:nil repeats:YES];
     [timer fire];
 
 	// Do any additional setup after loading the view.

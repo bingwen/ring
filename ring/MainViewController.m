@@ -27,6 +27,8 @@
     double radius;
     CGPoint ringCenter;
     int distance;
+    
+    MoodViewController *moodViewController;
 }
 
 @end
@@ -87,16 +89,22 @@
         [loginViewController.view setFrame:CGRectMake(0, 0, [Ext screenSize].width, [Ext screenSize].height)];
         [self.view addSubview:loginViewController.view];
     }
+    moodViewController = [[MoodViewController alloc] init];
+    moodViewController.view.frame = CGRectMake(0, 0, [Ext screenSize].width, [Ext screenSize].height);
+    
     if (NO) {
-        MoodViewController *moodViewController = [[MoodViewController alloc] init];
-        moodViewController.view.frame = CGRectMake(0, 0, [Ext screenSize].width, [Ext screenSize].height);
-        [self.view addSubview:moodViewController.view];
-    }
-    if (YES) {
         MoodLineViewController *moodLine = [[MoodLineViewController alloc] init];
         moodLine.view.frame = CGRectMake(0, 0, [Ext screenSize].width, [Ext screenSize].height);
         [self.view addSubview:moodLine.view];
     }
+    
+    UIButton *inviteBtn = [[UIButton alloc] init];
+    [inviteBtn setBackgroundImage:[UIImage imageNamed:@"input2.png"] forState:UIControlStateNormal];
+    inviteBtn.frame = CGRectMake(0, 190, 110, 28);
+    inviteBtn.center = CGPointMake(90, 205);
+    [inviteBtn addTarget:self action:@selector(showMoodView:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:inviteBtn];
+
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -105,6 +113,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark -- 动画
 - (void)checkPoint{
     
     heading += 1;
@@ -130,6 +139,20 @@
     [distanceViewController update];
     
 }
+
+- (IBAction)showMoodView:(id)sender{
+    CATransition *animation = [CATransition animation];
+    animation.duration = 0.5;
+    animation.delegate = self;
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    animation.type = kCATransitionPush;
+    animation.subtype = kCATransitionFromTop;
+    animation.removedOnCompletion = YES;
+    [self.view.layer addAnimation:animation forKey:@"mood-in"];
+    [self.view addSubview:moodViewController.view];
+}
+
+#pragma mark -- 定位
 
 //协议中的方法，作用是每当位置发生更新时会调用的委托方法
 -(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation

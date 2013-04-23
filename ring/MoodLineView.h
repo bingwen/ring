@@ -11,5 +11,7 @@
 @interface MoodLineView : UIView
 @property (nonatomic,strong) NSArray *points;
 @property (nonatomic,assign) int x;
+@property (nonatomic,assign) int y;
+@property (nonatomic,assign) double bottomY;
 @property (nonatomic,strong) UIColor *color;
 @end

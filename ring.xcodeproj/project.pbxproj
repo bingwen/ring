@@ -59,6 +59,7 @@
 		A198F31B1713CB43003E07FE /* face4.png in Resources */ = {isa = PBXBuildFile; fileRef = A198F3161713CB43003E07FE /* face4.png */; };
 		A198F31C1713CB43003E07FE /* line1.png in Resources */ = {isa = PBXBuildFile; fileRef = A198F3171713CB43003E07FE /* line1.png */; };
 		A1A015031712D67500E222BE /* MoodLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A015021712D67500E222BE /* MoodLineView.m */; };
+		A1A1FB5E17243291007023E4 /* ring_114pix.png in Resources */ = {isa = PBXBuildFile; fileRef = A1A1FB5D17243291007023E4 /* ring_114pix.png */; };
 		A1B46C48170BD68E00A630CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B46C47170BD68E00A630CA /* UIKit.framework */; };
 		A1B46C4A170BD68E00A630CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B46C49170BD68E00A630CA /* Foundation.framework */; };
 		A1B46C4C170BD68E00A630CA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B46C4B170BD68E00A630CA /* CoreGraphics.framework */; };
@@ -72,6 +73,10 @@
 		A1B46C6E170BE7DD00A630CA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B46C6D170BE7DD00A630CA /* CoreLocation.framework */; };
 		A1B46C72170BFD3F00A630CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B46C71170BFD3F00A630CA /* QuartzCore.framework */; };
 		A1B46C78170BFEEB00A630CA /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B46C77170BFEEA00A630CA /* LeftViewController.m */; };
+		A1B4C32C171F91F500FED58E /* send1.png in Resources */ = {isa = PBXBuildFile; fileRef = A1B4C32B171F91F500FED58E /* send1.png */; };
+		A1B4C330171F923A00FED58E /* input1.png in Resources */ = {isa = PBXBuildFile; fileRef = A1B4C32D171F923A00FED58E /* input1.png */; };
+		A1B4C331171F923A00FED58E /* input2.png in Resources */ = {isa = PBXBuildFile; fileRef = A1B4C32E171F923A00FED58E /* input2.png */; };
+		A1B4C332171F923A00FED58E /* user1.png in Resources */ = {isa = PBXBuildFile; fileRef = A1B4C32F171F923A00FED58E /* user1.png */; };
 		A1EE488E170C21320021A998 /* DDMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1EE488D170C21320021A998 /* DDMenuController.m */; };
 /* End PBXBuildFile section */
 
@@ -137,6 +142,7 @@
 		A198F3171713CB43003E07FE /* line1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line1.png; sourceTree = "<group>"; };
 		A1A015011712D67500E222BE /* MoodLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoodLineView.h; sourceTree = "<group>"; };
 		A1A015021712D67500E222BE /* MoodLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoodLineView.m; sourceTree = "<group>"; };
+		A1A1FB5D17243291007023E4 /* ring_114pix.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ring_114pix.png; sourceTree = "<group>"; };
 		A1B46C44170BD68E00A630CA /* ring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B46C47170BD68E00A630CA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A1B46C49170BD68E00A630CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -156,6 +162,10 @@
 		A1B46C71170BFD3F00A630CA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A1B46C76170BFEEA00A630CA /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
 		A1B46C77170BFEEA00A630CA /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		A1B4C32B171F91F500FED58E /* send1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = send1.png; sourceTree = "<group>"; };
+		A1B4C32D171F923A00FED58E /* input1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = input1.png; sourceTree = "<group>"; };
+		A1B4C32E171F923A00FED58E /* input2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = input2.png; sourceTree = "<group>"; };
+		A1B4C32F171F923A00FED58E /* user1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user1.png; sourceTree = "<group>"; };
 		A1EE488C170C21320021A998 /* DDMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMenuController.h; sourceTree = "<group>"; };
 		A1EE488D170C21320021A998 /* DDMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMenuController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -238,6 +248,10 @@
 		A16FD3441712AA6800EA10C8 /* mood */ = {
 			isa = PBXGroup;
 			children = (
+				A1B4C32D171F923A00FED58E /* input1.png */,
+				A1B4C32E171F923A00FED58E /* input2.png */,
+				A1B4C32F171F923A00FED58E /* user1.png */,
+				A1B4C32B171F91F500FED58E /* send1.png */,
 				A118C0041712AB910019B0AA /* 4bg_mood.jpg */,
 				A118C0061712ABB60019B0AA /* 5bg_mood.jpg */,
 				A118C0071712ABB60019B0AA /* back_mood.png */,
@@ -249,6 +263,13 @@
 				A118C00E1712ABB60019B0AA /* send.png */,
 			);
 			name = mood;
+			sourceTree = "<group>";
+		};
+		A198F31D1713E782003E07FE /* left */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = left;
 			sourceTree = "<group>";
 		};
 		A1A014FF1712D5FF00E222BE /* main */ = {
@@ -278,6 +299,7 @@
 		A1B46C3B170BD68E00A630CA = {
 			isa = PBXGroup;
 			children = (
+				A1A1FB5D17243291007023E4 /* ring_114pix.png */,
 				A1B46C4D170BD68E00A630CA /* ring */,
 				A1B46C46170BD68E00A630CA /* Frameworks */,
 				A1B46C45170BD68E00A630CA /* Products */,
@@ -345,6 +367,7 @@
 		A1B46C6A170BDFDB00A630CA /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				A198F31D1713E782003E07FE /* left */,
 				A118C01C1712B4A70019B0AA /* moodline */,
 				A118C0181712AC020019B0AA /* main */,
 				A16FD3441712AA6800EA10C8 /* mood */,
@@ -466,6 +489,11 @@
 				A198F31A1713CB43003E07FE /* face3.png in Resources */,
 				A198F31B1713CB43003E07FE /* face4.png in Resources */,
 				A198F31C1713CB43003E07FE /* line1.png in Resources */,
+				A1B4C32C171F91F500FED58E /* send1.png in Resources */,
+				A1B4C330171F923A00FED58E /* input1.png in Resources */,
+				A1B4C331171F923A00FED58E /* input2.png in Resources */,
+				A1B4C332171F923A00FED58E /* user1.png in Resources */,
+				A1A1FB5E17243291007023E4 /* ring_114pix.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
