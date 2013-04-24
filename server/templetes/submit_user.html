@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+
+  <div id="box">
+
+      <div class="head">
+        <h1>
+          {{ title }}
+        </h1>
+      </div>
+
+      <div class="form-content">
+        {{ ans_str|safe }}
+      </div>  
+  </div>
+{% endblock %}
+
+

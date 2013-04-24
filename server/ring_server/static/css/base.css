@@ -1,0 +1,173 @@
+body {
+	*text-align: center;
+	font-size: 12px;
+	font-family: '宋体',ncursive,Arial, Verdana, Geneva,sans-serif;
+	font-weight: normal;
+	color: #444444;
+}
+
+.nav-item {
+	color: white;
+	line-height: 20px;
+	font-size: 16px;
+}
+.wraper {
+	width: 920px;
+
+	margin: 30px auto;
+	margin-top: 70px;
+}
+label {
+	display: inline-block;
+	margin-left: 10px;
+}
+#box {
+	background: white;
+	width: 800px;
+	margin: 30px auto;
+	border: 6px solid #77d3ff;
+
+	padding: 10px 50px;
+}
+.statistic{
+	margin-bottom: 10px;
+	text-align: center;
+}
+.tip{
+	display: inline-block;
+	margin-right: 30px;
+	margin: 0,auto;
+}
+.form-content{
+	width: 800px;
+}
+.content {
+	width: 500px;
+	float: left;
+}
+.submiter{
+	width: 300px;
+	float: right;
+}
+.submiter-item{
+	width: 80px;
+	overflow: hidden;
+	display: inline-block;
+	line-height: 40px;
+	font-size: 16px;
+}
+.head {
+	line-height: 20px;
+	text-align: center;
+	width: 96%;
+	padding: 10px 2%;
+	*border-bottom: dashed 1px #CCCCCC;
+}
+.head h1 {
+	color: #19a8ee;
+}
+
+.msg{
+	text-align: center;
+
+	width: 96%;
+	color: #19a8ee;
+	font-size: 30px;
+	line-height: 36px;
+}
+}
+
+.question {
+	border: 2px solid white;
+	padding: 4px 4px 5px 4px;
+	border-bottom: 1px solid #EFEFEF;
+	clear: both;
+	margin: 2px auto;
+	width: 96%;
+	height: auto;
+}
+.qu_title {
+	overflow: hidden;
+	font-size: 14px;
+	color: #373A3D;
+	font-weight: bold;
+	line-height: 20px;
+	margin-bottom: 10px;
+}
+.qu_ans_list{
+	margin-left: 20px;
+}
+.qu_ans {
+	margin-bottom: 5px;
+	font-size: 12px;
+	color: #333333;
+}
+.submit {
+	margin: 20px auto;
+	text-align: center;
+}
+.submitbutton {
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	cursor: pointer;
+	font-size: 15px;
+	color: #fff;
+	font-weight: bold;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	padding: 0 15px;
+	overflow: visible;
+	border: 1px solid #0492d6;
+	background: #13a5ec;
+}
+
+.table {
+	width: 800px;
+	margin: 0 auto;
+	border: 2px solid #77d3ff;
+}
+.login-box {
+	width: 600px;
+	margin: 100px auto;
+	border: 2px solid #77d3ff;
+	padding: 30px 30px;
+	border-radius: 8px;
+}
+.login-box h2{
+	width: 70%;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	text-align: center;
+}
+.fieldWrapper{
+	width: 70%;
+	margin: 0 auto;
+}
+.fieldWrapper label{
+	min-width: 80px;
+}
+.action-btn {
+	margin-top: 30px;
+}
+.action-btn button{
+	margin: 0 20px;
+}
+.errorlist{
+	color: red;
+}
+.nav2{
+	float: right;
+}
+
+#copyright{
+	width: 97%;
+	margin: 0 auto;
+	padding: 10px 0;
+	font-family: Verdana;
+	font-size: 11px;
+	color: #666666;
+	text-align: center;
+}

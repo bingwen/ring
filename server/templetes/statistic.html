@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}统计结果-{{ title }}{% endblock %}
+
+{% block body %}
+
+  <div id="box">
+      <div class="head">
+        <h1>
+          {{ title }}-统计结果
+        </h1>
+      </div>
+      <div class="statistic">
+        <div class="tip"><span>开始时间:</span>{{form.submit_datetime|date:"Y-m-d"}}
+          </div>
+        <div class="tip">
+          <span>结束时间:</span>{{form.deadline|date:"Y-m-d"}}
+        </div>
+        <div class="tip">
+          <span>问卷提交人数:</span>{{form.submit_set.all.count}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="content">
+        {% for question in questions %}
+            <div class="question">
+              <div class="qu_title">
+                {{ forloop.counter }}. {{ question.title }}
+              </div>
+              <div class="qu_ans_list">
+                {% for an in question.ans.all %}
+                  <div class="qu_ans">
+                    <label>{{ an }}</label> ：{{ an.subitem_set.count }}
+                  </div>
+                {% endfor %}
+            </div>
+            </div>
+
+        {% endfor %}
+        </div>
+        <div class="submiter">
+          <h3>问卷提交</h3>
+          <ul>
+            {% for submit in form.submit_set.all %}
+              <li class="submiter-item">
+                <a href="/submit/{{form.id}}/{{submit.user.id}}">
+                {{submit.user.username}}
+              </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+    </div>
+  </div>
+{% endblock %}
+
+

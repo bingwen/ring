@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}注册新账号{% endblock %}
+
+{% block body %}
+
+<div class="login-box">
+	<form action="#" method="post">
+		{% csrf_token %}
+        <h2>账号注册</h2>
+		<div class="fieldWrapper">
+        	<label for="id_username">用户名*</label>
+        	{{ form.username }}{{ form.username.errors }}
+    	</div>
+    	<div class="fieldWrapper">
+        	<label for="id_email">电子邮件*</label>
+        	{{ form.email }}{{ form.email.errors }}
+    	</div>
+    	<div class="fieldWrapper">
+        	<label for="id_password">密码*</label>
+        	{{ form.password }}{{ form.password.errors }}
+    	</div>
+    	<div class="fieldWrapper">
+        	<label for="id_password2">确认密码*</label>
+        	{{ form.password2 }}{{ form.password2.errors }}
+    	</div>
+    	<div class="fieldWrapper action-btn">
+			<button class="btn btn-primary form-submit" id="edit-submit" name="op" value="创建新帐号" type="submit">创建新帐号</button>
+			<a class="btn" href="/accounts/login" value="返回登录">返回登录</a>
+		<div class="fieldWrapper">
+	</form>
+</div>
+
+{% endblock %}

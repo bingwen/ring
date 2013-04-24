@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}登陆{% endblock %}
+
+{% block body %}
+
+<div class="login-box">
+	<form action="#" method="post">
+		{% csrf_token %}
+        <h2>账号登陆</h2>
+		<div class="fieldWrapper">
+        	<label for="id_username">用户名</label>
+        	{{ form.username }}{{ form.username.errors }}
+    	</div>
+    	<div class="fieldWrapper">
+        	<label for="id_password">密码</label>
+        	{{ form.password }}{{ form.password.errors }}
+    	</div>
+    	<div class="fieldWrapper action-btn">
+			<button class="btn btn-primary form-submit" id="edit-submit" name="op" value="登陆帐号" type="submit">登陆帐号</button>
+
+			<a class="btn" href="/accounts/register" value="注册">注册</a>
+		</div>
+	</form>
+</div>
+
+{% endblock %}

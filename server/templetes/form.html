@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+
+  <div id="box">
+    <form action="/form_submit/{{form_id}}/" method="post">
+      {% csrf_token %}
+      <div class="head">
+        <h1>
+          {{ title }}
+        </h1>
+      </div>
+
+      <div class="form-content">
+        {% for question in questions %}
+            <div class="question">
+              <div class="qu_title">
+                {{ forloop.counter }}. {{ question.title }}
+              </div>
+              <div class="qu_ans_list">
+                {% for an in question.ans.all %}
+                  <div class="qu_ans">
+                    <input type="radio" class="radio" name="{{ question.id }}" value="{{ an.id }}">
+                    <label>{{ an }}</label>
+                  </div>
+                {% endfor %}
+            </div>
+            </div>
+
+        {% endfor %}
+        
+      <div class="submit">
+        <input type="submit" class="submitbutton" value="提交问卷" id="submit_button"></input>
+      </div>
+    </form>
+  </div>
+{% endblock %}
+
+

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}问卷调查系统{% endblock %}
+
+{% block body %}
+
+<div >
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>问卷</th>
+            <th>开始日期</th>
+            <th>结束日期</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+        	{% for form in forms %}
+          <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ form.title }}</td>
+            <td>{{ form.submit_datetime|date:"Y-m-d" }}</td>
+            <td>{{ form.deadline|date:"Y-m-d" }}</td>
+            <td>
+            	<a href="/form/{{ form.id }}">
+            		<button class="btn btn-primary">查看</button>
+            	</a>
+            	<a href="/statistic/{{ form.id }}">
+            		<button class="btn ">结果</button>
+            	</a>
+            </td>
+          </tr>
+          	{% endfor %}
+          
+        </tbody>
+      </table>
+</div>
+
+{% endblock %}

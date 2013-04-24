@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8;">
+  <title>{% block title %}问卷调查系统{% endblock %}</title> 
+  <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="/static/css/base.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="/static/js/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="/static/js/bootstrap.js"></script>
+  {% block more_header %}{% endblock %}
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <div class="nav-collapse">
+            <a class="brand" href="/">问卷调查系统</a>
+            <ul class="nav">
+              <li >
+                <a href="/"><span class="nav-item">首页</span></a>
+              </li>
+              <li >
+                <a href="/"><span class="nav-item">关于</span></a>
+              </li>
+            </ul>
+            <ul class="nav nav2" style="float:right;">
+              {% if request.user.is_authenticated %}
+                  <li class="nav-right">
+                    <a href="/"><span class="nav-item">{{request.user.username }}</span></a>
+                  </li>
+                  <li class="nav-right">
+                    <a href="/accounts/logout"><span class="nav-item">退出</span></a>
+                  </li>
+              {% else %}
+                  <li class="nav-right">
+                    <a href="/accounts/register"><span class="nav-item">注册</span></a>
+                  </li>
+                  <li class="nav-right">
+                    <a href="/accounts/login"><span class="nav-item">登陆</span></a>
+                  </li>
+              {% endif %}
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="wraper">
+  {% block body %}
+
+  {% endblock %}
+</div>
+
+<div id="copyright">Powered by <a href="http://twitter.github.com/bootstrap/">bootstrap</a> and <a href="https://www.djangoproject.com/">django</a></div>
+   {% block javascript %}{% endblock %}
+</body>
+</html>
+
