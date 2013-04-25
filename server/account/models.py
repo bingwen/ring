@@ -7,69 +7,6 @@ from django.contrib.auth.models import User
 from django.contrib.contenttypes.models import ContentType
 from django.core.urlresolvers import reverse
 
-class OrderedModel(models.Model):
-    order = models.PositiveIntegerField(editable=False)
-
-    def save(self):
-        if not self.id:
-            try:
-                self.order = self.__class__.objects.all().order_by("-order")[0].order + 1
-            except IndexError:
-                self.order = 0
-        super(OrderedModel, self).save()
-        
-
-    def order_link(self):
-        model_type_id = ContentType.objects.get_for_model(self.__class__).id
-        model_id = self.id
-        kwargs = {"direction": "up", "model_type_id": model_type_id, "model_id": model_id}
-        url_up = reverse("admin-move", kwargs=kwargs)
-        kwargs["direction"] = "down"
-        url_down = reverse("admin-move", kwargs=kwargs)
-        return '<a href="%s">up</a> | <a href="%s">down</a>' % (url_up, url_down)
-    order_link.allow_tags = True
-    order_link.short_description = 'Move'
-    order_link.admin_order_field = 'order'
-
-
-    @staticmethod
-    def move_down(model_type_id, model_id):
-        try:
-            ModelClass = ContentType.objects.get(id=model_type_id).model_class()
-
-            lower_model = ModelClass.objects.get(id=model_id)
-            higher_model = ModelClass.objects.filter(order__gt=lower_model.order)[0]
-            
-            lower_model.order, higher_model.order = higher_model.order, lower_model.order
-
-            higher_model.save()
-            lower_model.save()
-        except IndexError:
-            pass
-        except ModelClass.DoesNotExist:
-            pass
-                
-    @staticmethod
-    def move_up(model_type_id, model_id):
-        try:
-            ModelClass = ContentType.objects.get(id=model_type_id).model_class()
-
-            higher_model = ModelClass.objects.get(id=model_id)
-            lower_model = list(ModelClass.objects.filter(order__lt=higher_model.order))[-1]
-
-            lower_model.order, higher_model.order = higher_model.order, lower_model.order
-
-            higher_model.save()
-            lower_model.save()
-        except IndexError:
-            pass
-        except ModelClass.DoesNotExist:
-            pass
-
-    class Meta:
-        ordering = ["order"]
-        abstract = True
-
 GENDER = ( 
 	('M',u'男'), 
 	('F',u'女'), 
@@ -88,7 +25,7 @@ class UserProfile(models.Model):
 
 	user = models.OneToOneField(User, blank=True, null=True, related_name='user', verbose_name=(u'用户'))
 	gender = models.CharField((u'性别'), max_length=1, choices=GENDER, default='M')
-	def __unicode__(self):
+    def __unicode__(self):
 		return self.user
 	
 	class Meta:
@@ -107,4 +44,19 @@ class Pair(models.Model):
 	class Meta:
 		db_table = 'UserProfile'
 		verbose_name = verbose_name_plural = u'配对'
+
+class Token(models.Model):
+    user = models.ForeignKey(User,related_name='user', verbose_name=(u'用户'))
+    token = models.CharField(u'token',max_length=10)
+    submit_datetime = models.DateTimeField(u'添加时间', auto_now_add=True)
+    
+    def __unicode__(self):
+        return self.user+self.token
+    
+    class Meta:
+        db_table = 'UserToken'
+        verbose_name = verbose_name_plural = u'token'
+        
+
+#    ''.join(random.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits) for x in range(N))
 
