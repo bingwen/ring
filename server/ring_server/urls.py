@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.conf.urls import patterns, include, url
 
 # Uncomment the next two lines to enable the admin:
@@ -15,8 +16,8 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 
-
-    url(r'^accounts/register$', 'account.views.register',name="register"),  
-	url(r'^accounts/login$', 'account.views.login',name="login"),  
-	url(r'^accounts/logout$', 'account.views.logout',name="logout"), 
+    url(r'^register$', 'account.views.register',name="register"), 
+    url(r'^login$', 'account.views.login',name="login"), 
+    url(r'^logout$', 'account.views.logout',name="logout"),
+    url(r'^userinfo$', 'account.views.userinfo',name="userinfo"),
 )

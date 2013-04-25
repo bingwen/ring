@@ -1,4 +1,4 @@
-#coding=utf-8
+# -*- coding: utf-8 -*-
 from django import forms
 from django.forms.widgets import TextInput
 from .models import *
@@ -15,3 +15,5 @@ class UserProfileAdmin(UserAdmin):
 
 admin.site.unregister(User) #卸载user admin，并重新注册
 admin.site.register(User, UserProfileAdmin)
+admin.site.register(Pair)
+admin.site.register(Token)

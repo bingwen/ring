@@ -25,7 +25,7 @@ class UserProfile(models.Model):
 
 	user = models.OneToOneField(User, blank=True, null=True, related_name='user', verbose_name=(u'用户'))
 	gender = models.CharField((u'性别'), max_length=1, choices=GENDER, default='M')
-    def __unicode__(self):
+	def __unicode__(self):
 		return self.user
 	
 	class Meta:
@@ -39,24 +39,21 @@ class Pair(models.Model):
 	submit_datetime = models.DateTimeField(u'添加时间', auto_now_add=True)
 	
 	def __unicode__(self):
-		return self.user1+self.user2
+		return self.user1.username+self.user2.username
 	
 	class Meta:
-		db_table = 'UserProfile'
+		db_table = 'pair'
 		verbose_name = verbose_name_plural = u'配对'
 
 class Token(models.Model):
-    user = models.ForeignKey(User,related_name='user', verbose_name=(u'用户'))
+    user = models.ForeignKey(User,related_name='user_token', verbose_name=(u'用户'))
     token = models.CharField(u'token',max_length=10)
     submit_datetime = models.DateTimeField(u'添加时间', auto_now_add=True)
     
     def __unicode__(self):
-        return self.user+self.token
+        return self.user.username
     
     class Meta:
         db_table = 'UserToken'
         verbose_name = verbose_name_plural = u'token'
-        
-
-#    ''.join(random.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits) for x in range(N))
 
