@@ -30,7 +30,6 @@
 		A1922153170D2941002F1D20 /* data.db in Resources */ = {isa = PBXBuildFile; fileRef = A1922152170D2941002F1D20 /* data.db */; };
 		A1922155170D2A47002F1D20 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A1922154170D2A47002F1D20 /* libsqlite3.0.dylib */; };
 		A1922158170D2E54002F1D20 /* Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A1922157170D2E54002F1D20 /* Ext.m */; };
-		A192215B170D369B002F1D20 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A192215A170D369B002F1D20 /* DatabaseManager.m */; };
 		A1922180170D4B52002F1D20 /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = A192216E170D4B52002F1D20 /* 0.png */; };
 		A1922181170D4B52002F1D20 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = A192216F170D4B52002F1D20 /* 1.png */; };
 		A1922182170D4B52002F1D20 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = A1922170170D4B52002F1D20 /* 2.png */; };
@@ -77,6 +76,8 @@
 		A1B4C331171F923A00FED58E /* input2.png in Resources */ = {isa = PBXBuildFile; fileRef = A1B4C32E171F923A00FED58E /* input2.png */; };
 		A1B4C332171F923A00FED58E /* user1.png in Resources */ = {isa = PBXBuildFile; fileRef = A1B4C32F171F923A00FED58E /* user1.png */; };
 		A1EE488E170C21320021A998 /* DDMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1EE488D170C21320021A998 /* DDMenuController.m */; };
+		A9F230B2172E1EC40008F589 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F230B1172E1EC40008F589 /* Security.framework */; };
+		A9F230B5172E23010008F589 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F230B4172E23010008F589 /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,8 +109,6 @@
 		A1922154170D2A47002F1D20 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		A1922156170D2E54002F1D20 /* Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ext.h; sourceTree = "<group>"; };
 		A1922157170D2E54002F1D20 /* Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ext.m; sourceTree = "<group>"; };
-		A1922159170D369B002F1D20 /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
-		A192215A170D369B002F1D20 /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
 		A192216E170D4B52002F1D20 /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
 		A192216F170D4B52002F1D20 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		A1922170170D4B52002F1D20 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
@@ -166,6 +165,9 @@
 		A1B4C32F171F923A00FED58E /* user1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user1.png; sourceTree = "<group>"; };
 		A1EE488C170C21320021A998 /* DDMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMenuController.h; sourceTree = "<group>"; };
 		A1EE488D170C21320021A998 /* DDMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMenuController.m; sourceTree = "<group>"; };
+		A9F230B1172E1EC40008F589 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A9F230B3172E23010008F589 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		A9F230B4172E23010008F589 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9F230B2172E1EC40008F589 /* Security.framework in Frameworks */,
 				A1922155170D2A47002F1D20 /* libsqlite3.0.dylib in Frameworks */,
 				A1B46C72170BFD3F00A630CA /* QuartzCore.framework in Frameworks */,
 				A1B46C6E170BE7DD00A630CA /* CoreLocation.framework in Frameworks */,
@@ -237,6 +240,8 @@
 			children = (
 				A16FD32F17128ECE00EA10C8 /* LoginViewController.h */,
 				A16FD33017128ECE00EA10C8 /* LoginViewController.m */,
+				A9F230B3172E23010008F589 /* User.h */,
+				A9F230B4172E23010008F589 /* User.m */,
 				A16FD33D1712A66F00EA10C8 /* LoginUITextField.h */,
 				A16FD33E1712A66F00EA10C8 /* LoginUITextField.m */,
 			);
@@ -297,6 +302,7 @@
 		A1B46C3B170BD68E00A630CA = {
 			isa = PBXGroup;
 			children = (
+				A9F230B1172E1EC40008F589 /* Security.framework */,
 				A1B46C4D170BD68E00A630CA /* ring */,
 				A1B46C46170BD68E00A630CA /* Frameworks */,
 				A1B46C45170BD68E00A630CA /* Products */,
@@ -332,8 +338,6 @@
 				A1B46C56170BD68E00A630CA /* AppDelegate.h */,
 				A1B46C57170BD68E00A630CA /* AppDelegate.m */,
 				A1A014FF1712D5FF00E222BE /* main */,
-				A1922159170D369B002F1D20 /* DatabaseManager.h */,
-				A192215A170D369B002F1D20 /* DatabaseManager.m */,
 				A1922156170D2E54002F1D20 /* Ext.h */,
 				A1922157170D2E54002F1D20 /* Ext.m */,
 				A1B46C4E170BD68E00A630CA /* Supporting Files */,
@@ -506,7 +510,6 @@
 				A1B46C78170BFEEB00A630CA /* LeftViewController.m in Sources */,
 				A1EE488E170C21320021A998 /* DDMenuController.m in Sources */,
 				A1922158170D2E54002F1D20 /* Ext.m in Sources */,
-				A192215B170D369B002F1D20 /* DatabaseManager.m in Sources */,
 				A1922197170D647D002F1D20 /* PointView.m in Sources */,
 				A192219A170D72FE002F1D20 /* DistanceViewController.m in Sources */,
 				A16FD33117128ECE00EA10C8 /* LoginViewController.m in Sources */,
@@ -514,6 +517,7 @@
 				A16FD3431712AA4500EA10C8 /* MoodViewController.m in Sources */,
 				A118C01B1712B4480019B0AA /* MoodLineViewController.m in Sources */,
 				A1A015031712D67500E222BE /* MoodLineView.m in Sources */,
+				A9F230B5172E23010008F589 /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
