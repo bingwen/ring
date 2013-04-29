@@ -7,6 +7,9 @@
 //
 
 #import "User.h"
+#import "KeychainItemWrapper.h"
+#import <Security/Security.h>
+#import <Security/SecItem.h>
 
 @implementation User
 -(User *) initWithUsernameandPassword:(NSString *)uName Password:(NSString *)passwd{
@@ -15,6 +18,7 @@
         [self setUsername:uName];
         [self setPasswd:passwd];
     }
+    
     return self;
 }
 
@@ -36,22 +40,29 @@
 
 -(void) saveToKeyChain{
     //need implementation
+    [wrapper setObject:username forKey:(id)CFBridgingRelease(kSecAttrAccount)];
+    [wrapper setObject:password forKey:(id)CFBridgingRelease(kSecValueData)];
+    
+    
 }
 
--(User *) readFromKeyChain{
-    User *user = [[User alloc] initWithUsernameandPassword:@"" Password:@""];
-    return user;
+-(void) readFromKeyChain{
+    self->username = [wrapper objectForKey:(id)CFBridgingRelease(kSecAttrAccount)];
+    self->password = [wrapper objectForKey:(id)CFBridgingRelease(kSecValueData)];
+    
     
     //need implementation
 }
 
 -(Boolean *) checkUserExist:(NSString *)uName{
-    return false;
+    return FALSE;
     //need implementation
 }
 
 -(Boolean *) remove{
-    return true;
+    [wrapper resetKeychainItem]; 
+    
+    return FALSE;
     
     //need implementation
 }

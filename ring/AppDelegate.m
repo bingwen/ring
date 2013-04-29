@@ -11,6 +11,7 @@
 #import "MainViewController.h"
 #import "LeftViewController.h"
 #import "DDMenuController.h"
+#import "KeychainItemWrapper.h"
 
 
 @implementation AppDelegate

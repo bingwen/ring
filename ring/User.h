@@ -7,11 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "KeychainItemWrapper.h"
 
 @interface User : NSObject{
 @private
     NSString *username;
+@private
     NSString *password;
+    KeychainItemWrapper *wrapper;
 }
 -(User *) initWithUsernameandPassword:(NSString *)uName Password:(NSString *)passwd;
 -(NSString *) getUsername;
@@ -19,7 +22,8 @@
 -(NSString *) getPasswd;
 -(void) setPasswd:(NSString *) passwd;
 -(void) saveToKeyChain;
--(User *) readFromKeyChain;
+-(void) readFromKeyChain;
 -(Boolean *) checkUserExist:(NSString *) uName;
 -(Boolean *) remove;
+@property (nonatomic, retain) KeychainItemWrapper *wrapper;
 @end
