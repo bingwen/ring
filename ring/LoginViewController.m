@@ -13,6 +13,7 @@
 @interface LoginViewController ()<UITextFieldDelegate>{
     LoginUITextField *txtUsername;
     LoginUITextField *txtPassword;
+    
 }
 
 @end
@@ -31,6 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.view endEditing:YES];
     UIImage *bgImage = [UIImage imageNamed:@"4bg_login.jpg"];
     if ([Ext checkIphone5]) {
         bgImage = [UIImage imageNamed:@"5bg_login.jpg"];
@@ -42,7 +44,7 @@
     UIImageView *userBg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"user.png"]];
     UIImageView *passwordBg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"password.png"]];
     UIImageView *loginBg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"login.png"]];
-    
+    UIButton *btnLogin = [[UIButton alloc] initWithFrame:CGRectMake(0,0,140,25)];
     [userBg setFrame:CGRectMake(0, 0, 140, 26)];
     [passwordBg setFrame:CGRectMake(0, 0, 140, 26)];
     [loginBg setFrame:CGRectMake(0, 0, 140, 25)];
@@ -87,6 +89,9 @@
 	// Do any additional setup after loading the view.
 }
 
+-(IBAction)btnLogin:(id)sender{
+    
+}
 
 - (void)didReceiveMemoryWarning
 {

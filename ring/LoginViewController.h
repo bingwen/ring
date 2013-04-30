@@ -9,4 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface LoginViewController : UIViewController
+
+-(IBAction)btnLogin:(id)sender;
 @end

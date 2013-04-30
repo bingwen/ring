@@ -76,6 +76,7 @@
 		A1B4C331171F923A00FED58E /* input2.png in Resources */ = {isa = PBXBuildFile; fileRef = A1B4C32E171F923A00FED58E /* input2.png */; };
 		A1B4C332171F923A00FED58E /* user1.png in Resources */ = {isa = PBXBuildFile; fileRef = A1B4C32F171F923A00FED58E /* user1.png */; };
 		A1EE488E170C21320021A998 /* DDMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1EE488D170C21320021A998 /* DDMenuController.m */; };
+		A9D7AF73172F71A5003DB2E0 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D7AF72172F71A5003DB2E0 /* icon.png */; };
 		A9F230B2172E1EC40008F589 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F230B1172E1EC40008F589 /* Security.framework */; };
 		A9F230B5172E23010008F589 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F230B4172E23010008F589 /* User.m */; };
 /* End PBXBuildFile section */
@@ -165,6 +166,7 @@
 		A1B4C32F171F923A00FED58E /* user1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user1.png; sourceTree = "<group>"; };
 		A1EE488C170C21320021A998 /* DDMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMenuController.h; sourceTree = "<group>"; };
 		A1EE488D170C21320021A998 /* DDMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMenuController.m; sourceTree = "<group>"; };
+		A9D7AF72172F71A5003DB2E0 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
 		A9F230B1172E1EC40008F589 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A9F230B3172E23010008F589 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		A9F230B4172E23010008F589 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 		A1B46C6A170BDFDB00A630CA /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				A9D7AF72172F71A5003DB2E0 /* icon.png */,
 				A198F31D1713E782003E07FE /* left */,
 				A118C01C1712B4A70019B0AA /* moodline */,
 				A118C0181712AC020019B0AA /* main */,
@@ -498,6 +501,7 @@
 				A1B4C330171F923A00FED58E /* input1.png in Resources */,
 				A1B4C331171F923A00FED58E /* input2.png in Resources */,
 				A1B4C332171F923A00FED58E /* user1.png in Resources */,
+				A9D7AF73172F71A5003DB2E0 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +605,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ring/ring-Prefix.pch";
 				INFOPLIST_FILE = "ring/ring-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -612,6 +617,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ring/ring-Prefix.pch";
 				INFOPLIST_FILE = "ring/ring-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
