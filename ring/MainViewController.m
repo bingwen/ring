@@ -15,6 +15,7 @@
 #import "LoginViewController.h"
 #import "MoodViewController.h"
 #import "MoodLineViewController.h"
+#import "User.h"
 
 @interface MainViewController ()<CLLocationManagerDelegate>{
     CLLocationManager *locationmanager;
@@ -84,7 +85,9 @@
     NSTimer * timer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(checkPoint) userInfo:nil repeats:YES];
     [timer fire];
     
-    if (NO) {
+    User *user = [[User alloc] initWithUsernameandPassword:@"" Password:@""];//Currently
+    
+    if (YES) {
         LoginViewController *loginViewController = [[LoginViewController alloc] init];
         [loginViewController.view setFrame:CGRectMake(0, 0, [Ext screenSize].width, [Ext screenSize].height)];
         [self.view addSubview:loginViewController.view];

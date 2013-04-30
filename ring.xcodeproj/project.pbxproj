@@ -168,6 +168,8 @@
 		A9F230B1172E1EC40008F589 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A9F230B3172E23010008F589 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		A9F230B4172E23010008F589 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		A9F230B6172E3A830008F589 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		A9F230B7172E3A830008F589 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +240,8 @@
 		A16FD3401712AA1D00EA10C8 /* login */ = {
 			isa = PBXGroup;
 			children = (
+				A9F230B6172E3A830008F589 /* KeychainItemWrapper.h */,
+				A9F230B7172E3A830008F589 /* KeychainItemWrapper.m */,
 				A16FD32F17128ECE00EA10C8 /* LoginViewController.h */,
 				A16FD33017128ECE00EA10C8 /* LoginViewController.m */,
 				A9F230B3172E23010008F589 /* User.h */,
@@ -302,7 +306,6 @@
 		A1B46C3B170BD68E00A630CA = {
 			isa = PBXGroup;
 			children = (
-				A9F230B1172E1EC40008F589 /* Security.framework */,
 				A1B46C4D170BD68E00A630CA /* ring */,
 				A1B46C46170BD68E00A630CA /* Frameworks */,
 				A1B46C45170BD68E00A630CA /* Products */,
@@ -320,6 +323,7 @@
 		A1B46C46170BD68E00A630CA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A9F230B1172E1EC40008F589 /* Security.framework */,
 				A1922154170D2A47002F1D20 /* libsqlite3.0.dylib */,
 				A1B46C71170BFD3F00A630CA /* QuartzCore.framework */,
 				A1B46C6D170BE7DD00A630CA /* CoreLocation.framework */,

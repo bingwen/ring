@@ -11,8 +11,8 @@
 #import "LoginUITextField.h"
 
 @interface LoginViewController ()<UITextFieldDelegate>{
-    LoginUITextField *username;
-    LoginUITextField *password;
+    LoginUITextField *txtUsername;
+    LoginUITextField *txtPassword;
 }
 
 @end
@@ -55,34 +55,34 @@
     [self.view addSubview:passwordBg];
     [self.view addSubview:loginBg];
     
-    username = [[LoginUITextField alloc] init];
-    password = [[LoginUITextField alloc] init];
-    [username setPlaceholder:@"新浪微博账号"];
-    [password setPlaceholder:@"登录密码"];
-    [password setSecureTextEntry:YES];
+    txtUsername = [[LoginUITextField alloc] init];
+    txtPassword = [[LoginUITextField alloc] init];
+    [txtUsername setPlaceholder:@"Email/Username"];
+    [txtPassword setPlaceholder:@"Password"];
+    [txtPassword setSecureTextEntry:YES];
     
-    username.font = [UIFont fontWithName:@"Arial" size:12.0f];
-    password.font = [UIFont fontWithName:@"Arial" size:12.0f];
-    username.textColor = [UIColor blackColor];
-    password.textColor = [UIColor blackColor];
-    username.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
-    password.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
-    username.returnKeyType =UIReturnKeyNext;
+    txtUsername.font = [UIFont fontWithName:@"Arial" size:12.0f];
+    txtPassword.font = [UIFont fontWithName:@"Arial" size:12.0f];
+    txtUsername.textColor = [UIColor blackColor];
+    txtPassword.textColor = [UIColor blackColor];
+    txtUsername.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+    txtPassword.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+    txtUsername.returnKeyType =UIReturnKeyNext;
     
     
-    password.clearsOnBeginEditing = YES;
+    txtPassword.clearsOnBeginEditing = YES;
     
-    username.alpha = 0.5;
-    password.alpha = 0.5;
-    username.delegate = self;
-    password.delegate = self;
-    [username setFrame:CGRectMake(0, 0, 110, 26)];
-    [password setFrame:CGRectMake(0, 0, 110, 26)];
-    [username setCenter:CGPointMake([Ext screenSize].width/2+15,  [Ext screenSize].height/2-50-30)];
-    [password setCenter:CGPointMake([Ext screenSize].width/2+15,  [Ext screenSize].height/2-50)];
+    txtUsername.alpha = 0.5;
+    txtPassword.alpha = 0.5;
+    txtUsername.delegate = self;
+    txtPassword.delegate = self;
+    [txtUsername setFrame:CGRectMake(0, 0, 110, 26)];
+    [txtPassword setFrame:CGRectMake(0, 0, 110, 26)];
+    [txtUsername setCenter:CGPointMake([Ext screenSize].width/2+15,  [Ext screenSize].height/2-50-30)];
+    [txtPassword setCenter:CGPointMake([Ext screenSize].width/2+15,  [Ext screenSize].height/2-50)];
     
-    [self.view addSubview:username];
-    [self.view addSubview:password];
+    [self.view addSubview:txtUsername];
+    [self.view addSubview:txtPassword];
     
 	// Do any additional setup after loading the view.
 }
