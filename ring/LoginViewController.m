@@ -33,9 +33,9 @@
 {
     [super viewDidLoad];
     [self.view endEditing:YES];
-    UIImage *bgImage = [UIImage imageNamed:@"4bg_login.jpg"];
+    UIImage *bgImage = [UIImage imageNamed:@"bg.jpg"];
     if ([Ext checkIphone5]) {
-        bgImage = [UIImage imageNamed:@"5bg_login.jpg"];
+        bgImage = [UIImage imageNamed:@"5bg.jpg"];
     }
     UIImageView *bgView = [[UIImageView alloc] initWithImage:bgImage];
     [bgView setFrame:CGRectMake(0, 0, [Ext screenSize].width, [Ext screenSize].height)];
@@ -44,7 +44,12 @@
     UIImageView *userBg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"user.png"]];
     UIImageView *passwordBg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"password.png"]];
     UIImageView *loginBg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"login.png"]];
+    UIImageView *signinBg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"signin.png"]];
+    
+    
     UIButton *btnLogin = [[UIButton alloc] initWithFrame:CGRectMake(0,0,140,25)];
+    
+    
     [userBg setFrame:CGRectMake(0, 0, 140, 26)];
     [passwordBg setFrame:CGRectMake(0, 0, 140, 26)];
     [loginBg setFrame:CGRectMake(0, 0, 140, 25)];
