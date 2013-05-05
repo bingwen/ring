@@ -32,7 +32,7 @@ class Mood(models.Model):
 	latitude = models.CharField(u'纬度',max_length=20)
 
 	def __unicode__(self):
-		return self.user.username
+		return self.submit_datetime.strftime("%Y-%m-%d-%H")+">"+self.user.username
 	
 	class Meta:
 		db_table = 'mood'
