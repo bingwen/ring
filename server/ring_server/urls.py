@@ -18,6 +18,7 @@ urlpatterns = patterns('',
 
     url(r'^register$', 'account.views.register',name="register"), 
     url(r'^login$', 'account.views.login',name="login"), 
-    url(r'^logout$', 'account.views.logout',name="logout"),
-    url(r'^userinfo$', 'account.views.userinfo',name="userinfo"),
+
+    url(r'^sendMood$', 'mood.views.sendMood',name="sendMood"), 
+    url(r'^getMood$', 'mood.views.getMood',name="getMood"), 
 )

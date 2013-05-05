@@ -5,6 +5,10 @@ from django.db import models
 from django.contrib.auth.models import User
 import datetime
 
+SENDERLIST = ( 
+	('0',u'A'), 
+	('1',u'B'), 
+) 
 MOODLIST = ( 
 	('0',u'好'), 
 	('1',u'不好'), 
@@ -19,6 +23,7 @@ class Mood(models.Model):
 
 	user = models.ForeignKey(User)
 	submit_datetime = models.DateTimeField(u'添加时间', auto_now_add=True)
+	sender = models.CharField(u'Sender', max_length=1,choices=SENDERLIST, default='0')
 	mood = models.CharField(u'心情', max_length=1,choices=MOODLIST, default='0')
 	content = models.TextField(u'内容')
 	weather = models.CharField(u'天气', max_length=1,choices=WEATHERLIST, default='0')
@@ -26,9 +31,8 @@ class Mood(models.Model):
 	longitude = models.CharField(u'经度',max_length=20)
 	latitude = models.CharField(u'纬度',max_length=20)
 
-
 	def __unicode__(self):
-		return self.user
+		return self.user.username
 	
 	class Meta:
 		db_table = 'mood'
