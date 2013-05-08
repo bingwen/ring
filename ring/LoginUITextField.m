@@ -38,4 +38,7 @@
     [[self placeholder] drawInRect:rect withFont:[UIFont systemFontOfSize:12]];
 }
 
+-(void)hideKeyboard{
+    [self resignFirstResponder];
+}
 @end

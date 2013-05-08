@@ -10,4 +10,5 @@
 
 @interface LoginUITextField : UITextField
 
+-(void)hideKeyboard;
 @end

@@ -85,9 +85,17 @@
     NSTimer * timer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(checkPoint) userInfo:nil repeats:YES];
     [timer fire];
     
-    User *user = [[User alloc] initWithUsernameandPassword:@"" Password:@""];//Currently
+    User *user = [[User alloc] initWithUsernameandPassword:@"" Password:@""];
+    Boolean *loggedIn = FALSE;
     
-    if (YES) {
+    @try{
+        loggedIn = [user readFromKeyChain];
+    }
+    @catch(NSException *e){
+        loggedIn = FALSE;
+    }
+    
+    if (!loggedIn) {
         LoginViewController *loginViewController = [[LoginViewController alloc] init];
         [loginViewController.view setFrame:CGRectMake(0, 0, [Ext screenSize].width, [Ext screenSize].height)];
         [self.view addSubview:loginViewController.view];
@@ -95,18 +103,14 @@
     moodViewController = [[MoodViewController alloc] init];
     moodViewController.view.frame = CGRectMake(0, 0, [Ext screenSize].width, [Ext screenSize].height);
     
+    /*
     if (NO) {
         MoodLineViewController *moodLine = [[MoodLineViewController alloc] init];
         moodLine.view.frame = CGRectMake(0, 0, [Ext screenSize].width, [Ext screenSize].height);
         [self.view addSubview:moodLine.view];
     }
+    */
     
-    UIButton *inviteBtn = [[UIButton alloc] init];
-    [inviteBtn setBackgroundImage:[UIImage imageNamed:@"input2.png"] forState:UIControlStateNormal];
-    inviteBtn.frame = CGRectMake(0, 190, 110, 28);
-    inviteBtn.center = CGPointMake(90, 205);
-    [inviteBtn addTarget:self action:@selector(showMoodView:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:inviteBtn];
 
 	// Do any additional setup after loading the view, typically from a nib.
 }

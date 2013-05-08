@@ -22,7 +22,7 @@
 -(NSString *) getPasswd;
 -(void) setPasswd:(NSString *) passwd;
 -(void) saveToKeyChain;
--(void) readFromKeyChain;
+-(BOOL *) readFromKeyChain;
 -(Boolean *) checkUserExist:(NSString *) uName;
 -(Boolean *) remove;
 @property (nonatomic, retain) KeychainItemWrapper *wrapper;

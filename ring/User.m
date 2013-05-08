@@ -46,12 +46,13 @@
     
 }
 
--(void) readFromKeyChain{
+-(BOOL *) readFromKeyChain{
     self->username = [wrapper objectForKey:(id)CFBridgingRelease(kSecAttrAccount)];
     self->password = [wrapper objectForKey:(id)CFBridgingRelease(kSecValueData)];
-    
-    
-    //need implementation
+    if(self->username != NULL && self->password != NULL){
+        return YES;
+    }
+    return NO;
 }
 
 -(Boolean *) checkUserExist:(NSString *)uName{

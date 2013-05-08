@@ -10,5 +10,6 @@
 
 @interface LoginViewController : UIViewController
 
--(IBAction)btnLogin:(id)sender;
+-(void)onLoginClick:(UIGestureRecognizer *) gestureRecognizer;
+-(void)onSigninClick:(UIGestureRecognizer *) gestureRecognizer;
 @end

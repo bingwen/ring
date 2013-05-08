@@ -75,12 +75,13 @@
 		A9DD4128172FBE8200ADAF55 /* 5bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A9DD4121172FBE8200ADAF55 /* 5bg.jpg */; };
 		A9DD4129172FBE8200ADAF55 /* bg_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = A9DD4122172FBE8200ADAF55 /* bg_circle.png */; };
 		A9DD412A172FBE8200ADAF55 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A9DD4123172FBE8200ADAF55 /* bg.jpg */; };
-		A9DD412B172FBE8200ADAF55 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = A9DD4124172FBE8200ADAF55 /* login.png */; };
 		A9DD412C172FBE8200ADAF55 /* password.png in Resources */ = {isa = PBXBuildFile; fileRef = A9DD4125172FBE8200ADAF55 /* password.png */; };
 		A9DD412D172FBE8200ADAF55 /* signin.png in Resources */ = {isa = PBXBuildFile; fileRef = A9DD4126172FBE8200ADAF55 /* signin.png */; };
 		A9DD412E172FBE8200ADAF55 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = A9DD4127172FBE8200ADAF55 /* user.png */; };
 		A9F230B2172E1EC40008F589 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F230B1172E1EC40008F589 /* Security.framework */; };
 		A9F230B5172E23010008F589 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F230B4172E23010008F589 /* User.m */; };
+		A9F8C1A7173932A200CF848A /* registerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F8C1A6173932A200CF848A /* registerViewController.m */; };
+		A9F8C1A9173A630400CF848A /* loginBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = A9F8C1A8173A630400CF848A /* loginBtn.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -167,7 +168,6 @@
 		A9DD4121172FBE8200ADAF55 /* 5bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5bg.jpg; sourceTree = "<group>"; };
 		A9DD4122172FBE8200ADAF55 /* bg_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_circle.png; sourceTree = "<group>"; };
 		A9DD4123172FBE8200ADAF55 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
-		A9DD4124172FBE8200ADAF55 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
 		A9DD4125172FBE8200ADAF55 /* password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password.png; sourceTree = "<group>"; };
 		A9DD4126172FBE8200ADAF55 /* signin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signin.png; sourceTree = "<group>"; };
 		A9DD4127172FBE8200ADAF55 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
@@ -176,6 +176,9 @@
 		A9F230B4172E23010008F589 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		A9F230B6172E3A830008F589 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
 		A9F230B7172E3A830008F589 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		A9F8C1A5173932A200CF848A /* registerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = registerViewController.h; path = ../registerViewController.h; sourceTree = "<group>"; };
+		A9F8C1A6173932A200CF848A /* registerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = registerViewController.m; path = ../registerViewController.m; sourceTree = "<group>"; };
+		A9F8C1A8173A630400CF848A /* loginBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginBtn.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,10 +237,10 @@
 		A16FD33217128EE200EA10C8 /* login */ = {
 			isa = PBXGroup;
 			children = (
+				A9F8C1A8173A630400CF848A /* loginBtn.png */,
 				A9DD4121172FBE8200ADAF55 /* 5bg.jpg */,
 				A9DD4122172FBE8200ADAF55 /* bg_circle.png */,
 				A9DD4123172FBE8200ADAF55 /* bg.jpg */,
-				A9DD4124172FBE8200ADAF55 /* login.png */,
 				A9DD4125172FBE8200ADAF55 /* password.png */,
 				A9DD4126172FBE8200ADAF55 /* signin.png */,
 				A9DD4127172FBE8200ADAF55 /* user.png */,
@@ -248,6 +251,8 @@
 		A16FD3401712AA1D00EA10C8 /* login */ = {
 			isa = PBXGroup;
 			children = (
+				A9F8C1A5173932A200CF848A /* registerViewController.h */,
+				A9F8C1A6173932A200CF848A /* registerViewController.m */,
 				A9F230B6172E3A830008F589 /* KeychainItemWrapper.h */,
 				A9F230B7172E3A830008F589 /* KeychainItemWrapper.m */,
 				A16FD32F17128ECE00EA10C8 /* LoginViewController.h */,
@@ -506,10 +511,10 @@
 				A9DD4128172FBE8200ADAF55 /* 5bg.jpg in Resources */,
 				A9DD4129172FBE8200ADAF55 /* bg_circle.png in Resources */,
 				A9DD412A172FBE8200ADAF55 /* bg.jpg in Resources */,
-				A9DD412B172FBE8200ADAF55 /* login.png in Resources */,
 				A9DD412C172FBE8200ADAF55 /* password.png in Resources */,
 				A9DD412D172FBE8200ADAF55 /* signin.png in Resources */,
 				A9DD412E172FBE8200ADAF55 /* user.png in Resources */,
+				A9F8C1A9173A630400CF848A /* loginBtn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +539,7 @@
 				A118C01B1712B4480019B0AA /* MoodLineViewController.m in Sources */,
 				A1A015031712D67500E222BE /* MoodLineView.m in Sources */,
 				A9F230B5172E23010008F589 /* User.m in Sources */,
+				A9F8C1A7173932A200CF848A /* registerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
