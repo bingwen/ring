@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "Ext.h"
 #import "LoginUITextField.h"
+#import "registerViewController.h"
 
 @interface LoginViewController ()<UITextFieldDelegate>{
     LoginUITextField *txtUsername;
@@ -27,7 +28,21 @@
     }
     return self;
 }
-
+-(void)onSigninClick:(UIGestureRecognizer *) gestureRecognizer{
+    NSLog(@"method called");
+    registerViewController *registerView = [[registerViewController alloc] init];
+    [registerView.view  setFrame:CGRectMake(0, 0, [Ext screenSize].width, [Ext screenSize].height)];
+    NSLog(@"registerView initialized");
+    
+    UINavigationController *navi = [[UINavigationController alloc]init];
+    [navi pushViewController:registerView animated:YES];
+    NSLog(@"view navigated");
+    /*
+     
+     [self.view.window addSubview:registerView.view];
+     */
+    
+}
 - (void)viewDidLoad
 {
     
@@ -69,7 +84,7 @@
     txtPassword = [[LoginUITextField alloc] init];
     
     
-    [txtUsername setPlaceholder:@"Email/Username"];
+    [txtUsername setPlaceholder:@"Email/Username"]; 
     [txtPassword setPlaceholder:@"Password"];
     [txtPassword setSecureTextEntry:YES];
     
@@ -103,38 +118,27 @@
     [loginBtn setFrame:CGRectMake(0, 0, 40, 40)];
     [loginBtn setCenter:CGPointMake([Ext screenSize].width - 40, [Ext screenSize].height/2 - 31)];
     
-    [loginBtn setUserInteractionEnabled:YES];
-    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onLoginClick:)];
+    
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onLoginClick)];
+    singleTap.numberOfTapsRequired = 1;
+    singleTap.numberOfTouchesRequired = 1;
     [loginBtn addGestureRecognizer:singleTap];
-    //这里有bug
+    [loginBtn setUserInteractionEnabled:YES];
     [self.view addSubview:loginBtn];
     
     UIImageView *signInBtn = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"signin.png"]];
     [signInBtn setFrame:CGRectMake(0, 0, 32, 32)];
     [signInBtn setCenter:CGPointMake([Ext screenSize].width - 40, [Ext screenSize].height/2 + 2)];
-    [signInBtn setUserInteractionEnabled:YES];
+    NSLog(@"click gesture added");
+    
     UITapGestureRecognizer *singleTap2 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onSigninClick:)];
+    singleTap2.numberOfTapsRequired = 1;
+    singleTap2.numberOfTouchesRequired = 1;
     [signInBtn addGestureRecognizer:singleTap2];
+    [signInBtn setUserInteractionEnabled:YES];
     [self.view addSubview:signInBtn];
                                     
-    /*
-    
-    UIImageView *loginBg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"login.png"]];
-    //UIImageView *signinBg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"signin.png"]];
-    
-    [loginBg setFrame:CGRectMake(0, 0, 140, 25)];
-    
-    
-    [loginBg setCenter:CGPointMake([Ext screenSize].width/2,  [Ext screenSize].height/2-50+30)];
-    
-    [self.view addSubview:loginBg];
-    
-    [btnLogin setFrame:CGRectMake(0,0,140,25)];
-    
-    btnLogin = [[UIButton alloc] init];
-    [self.view addSubview:btnLogin];
-     */
-	// Do any additional setup after loading the view.
+    	// Do any additional setup after loading the view.
 }
 
 -(void)textFieldDidEndEditing:(UITextField *)textField{
@@ -161,9 +165,8 @@
     //http request
 }
 
--(void) onSigninClick:(UIGestureRecognizer *) gestureRecognizer{
+
     
-}
 - (void)connection:(NSURLConnection*) connection didReceiveResponse:(NSURLResponse *)response
 {
     NSLog(@"Response recieved");
@@ -183,6 +186,19 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(void) viewDidUnload{
+    
+    
+    [super viewDidUnload];
+    
+    
+}
+
+-(void)viewWillUnload{
+    [super viewWillUnload];
+    
+    [self.view removeFromSuperview];
 }
 
 @end

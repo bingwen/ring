@@ -57,12 +57,6 @@
     userImage.center = CGPointMake(26, 205);
     [self.view addSubview:userImage];
     
-    UIButton *inviteBtn = [[UIButton alloc] init];
-    [inviteBtn setBackgroundImage:[UIImage imageNamed:@"input2.png"] forState:UIControlStateNormal];
-    inviteBtn.frame = CGRectMake(0, 190, 110, 28);
-    inviteBtn.center = CGPointMake(90, 205);
-    [self.view addSubview:inviteBtn];
-    
     
     UIButton *sendBtn = [[UIButton alloc] init];
     [sendBtn setBackgroundImage:[UIImage imageNamed:@"send.png"] forState:UIControlStateNormal];

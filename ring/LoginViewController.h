@@ -12,4 +12,5 @@
 
 -(void)onLoginClick:(UIGestureRecognizer *) gestureRecognizer;
 -(void)onSigninClick:(UIGestureRecognizer *) gestureRecognizer;
+
 @end
