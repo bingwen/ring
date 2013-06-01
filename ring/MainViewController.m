@@ -86,10 +86,13 @@
     [timer fire];
     
     User *user = [[User alloc] initWithUsernameandPassword:@"" Password:@""];
-    Boolean *loggedIn = FALSE;
+    BOOL *loggedIn = FALSE;
     
     @try{
         loggedIn = [user readFromKeyChain];
+        //loggedIn = TRUE;
+        moodViewController = [[MoodViewController alloc] init];
+        moodViewController.view.frame = CGRectMake(0, 0, [Ext screenSize].width, [Ext screenSize].height);
     }
     @catch(NSException *e){
         loggedIn = FALSE;
@@ -100,8 +103,7 @@
         [loginViewController.view setFrame:CGRectMake(0, 0, [Ext screenSize].width, [Ext screenSize].height)];
         [self.view addSubview:loginViewController.view];
     }
-    moodViewController = [[MoodViewController alloc] init];
-    moodViewController.view.frame = CGRectMake(0, 0, [Ext screenSize].width, [Ext screenSize].height);
+    
     
     /*
     if (NO) {

@@ -28,7 +28,31 @@
     }
     return self;
 }
--(void)onSigninClick:(UIGestureRecognizer *) gestureRecognizer{
+
+-(void) onLoginClick:(UITapGestureRecognizer *) sender{
+        NSLog(@"onLoginClick called");
+    
+    /*NSURL *url = [[NSURL alloc] initWithString:@"http://ring.bingwenshi.com/login"];
+     
+     
+     NSDictionary *data = [[NSDictionary alloc] initWithObjectsAndKeys: txtUsername.text, @"email",
+     txtPassword.text, @"password", nil];
+     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+     
+     NSError *error;
+     NSData *postData = [NSJSONSerialization dataWithJSONObject:data options:0 error:&error];
+     
+     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+     [request setHTTPMethod:@"POST"];
+     [request setHTTPBody:postData];
+     
+     NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+     [connection start];*/
+    //http request
+}
+
+
+-(void) onSigninClick:(UIGestureRecognizer *) sender{
     NSLog(@"method called");
     registerViewController *registerView = [[registerViewController alloc] init];
     [registerView.view  setFrame:CGRectMake(0, 0, [Ext screenSize].width, [Ext screenSize].height)];
@@ -62,19 +86,14 @@
     
     [self.view addSubview:bgView];
     
-    UIImageView *circle = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_circle.png"]];
-    [circle setFrame:CGRectMake(0, 0, 448, 448)];
-    circle.contentMode = UIViewContentModeCenter;
-    [self.view addSubview:circle];
-    
     UIImageView *userBg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"user.png"]];
     UIImageView *passwordBg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"password.png"]];
     
     [userBg setFrame:CGRectMake(0, 0, 140, 26)];
     [passwordBg setFrame:CGRectMake(0, 0, 140, 26)];
     
-    [userBg setCenter:CGPointMake(72,  [Ext screenSize].height/2 - 32)];
-    [passwordBg setCenter:CGPointMake(72, [Ext screenSize].height/2 + 1)];
+    [userBg setCenter:CGPointMake(108,  [Ext screenSize].height/2 - 32)];
+    [passwordBg setCenter:CGPointMake(108, [Ext screenSize].height/2 -6)];
     
     [self.view addSubview:userBg];
     [self.view addSubview:passwordBg];
@@ -107,29 +126,33 @@
     [txtUsername setFrame:CGRectMake(0, 0, 110, 26)];
     [txtPassword setFrame:CGRectMake(0, 0, 110, 26)];
     
-    [txtUsername setCenter:CGPointMake(76,  [Ext screenSize].height/2-31)];
-    [txtPassword setCenter:CGPointMake(76,  [Ext screenSize].height/2+2)];
+    [txtUsername setCenter:CGPointMake(110,  [Ext screenSize].height/2-31)];
+    [txtPassword setCenter:CGPointMake(110,  [Ext screenSize].height/2 -6)];
     
     
     [self.view addSubview:txtUsername];
     [self.view addSubview:txtPassword];
     
+    
+    // The Problem
     UIImageView *loginBtn = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"loginBtn.png"]];
     [loginBtn setFrame:CGRectMake(0, 0, 40, 40)];
-    [loginBtn setCenter:CGPointMake([Ext screenSize].width - 40, [Ext screenSize].height/2 - 31)];
+    [loginBtn setCenter:CGPointMake([Ext screenSize].width - 60, [Ext screenSize].height/2 - 24)];
+    [loginBtn setUserInteractionEnabled:YES];
     
-    
-    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onLoginClick)];
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onLoginClick:)];
     singleTap.numberOfTapsRequired = 1;
     singleTap.numberOfTouchesRequired = 1;
     [loginBtn addGestureRecognizer:singleTap];
-    [loginBtn setUserInteractionEnabled:YES];
+    [singleTap release];
+    NSLog(@"click gesture added");
     [self.view addSubview:loginBtn];
+    
     
     UIImageView *signInBtn = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"signin.png"]];
     [signInBtn setFrame:CGRectMake(0, 0, 32, 32)];
-    [signInBtn setCenter:CGPointMake([Ext screenSize].width - 40, [Ext screenSize].height/2 + 2)];
-    NSLog(@"click gesture added");
+    [signInBtn setCenter:CGPointMake([Ext screenSize].width - 64, [Ext screenSize].height/2 + 10)];
+    
     
     UITapGestureRecognizer *singleTap2 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onSigninClick:)];
     singleTap2.numberOfTapsRequired = 1;
@@ -145,25 +168,7 @@
     [textField resignFirstResponder];
 }
 
--(void)onLoginClick:(UIGestureRecognizer *) gestureRecognizer{
-    NSURL *url = [[NSURL alloc] initWithString:@"http://ring.bingwenshi.com/login"];
-    
-    
-    NSDictionary *data = [[NSDictionary alloc] initWithObjectsAndKeys: txtUsername.text, @"email", 
-                          txtPassword.text, @"password", nil];
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
-    
-    NSError *error;
-    NSData *postData = [NSJSONSerialization dataWithJSONObject:data options:0 error:&error];
-    
-    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [request setHTTPMethod:@"POST"];
-    [request setHTTPBody:postData];
-    
-    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    [connection start];
-    //http request
-}
+
 
 
     
